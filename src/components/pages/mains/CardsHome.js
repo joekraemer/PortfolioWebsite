@@ -1,8 +1,8 @@
 import React from 'react'
-import CardItem from './CardItem'
-import './Cards.css'
+import CardItem from '../../CardItem'
+import '../../Cards.css'
 
-function Cards() {
+function CardsHome() {
     return (
         <div className='cards'>
             <h1>Check out these EPIC destinations</h1>
@@ -48,4 +48,4 @@ function Cards() {
     )
 }
 
-export default Cards
+export default CardsHome

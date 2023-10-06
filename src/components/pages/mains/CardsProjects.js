@@ -1,24 +1,31 @@
 import React from 'react'
 import CardItem from '../../CardItem'
-import './Cards.css'
+import '../../Cards.css'
 
-function Cards() {
+
+function CardsProject() {
     return (
         <div className='cards'>
-            <h1>Check out these EPIC destinations</h1>
+            <h1>Programming Projects</h1>
             <div className="cards__container">
                 <div className="cards__wrapper">
                     <ul className="cards__items">
                         <CardItem
-                            src="images/img-9.jpg"
-                            text="Expore the hidden waterfall in the amazon jungle"
-                            label='Adventure'
-                            path='/services'
+                            src="images/subpages/3dprinter/3dprinter_complete.jpg"
+                            text="I combined a variety of designs and models as well as my own ideas and modifications to create my very own 3D Printer. "
+                            label='Project'
+                            path='/projects/printer3d'
                         />
                         <CardItem
                             src="images/img-2.jpg"
                             text="Travel through th islands of Bali"
                             label='Luxury'
+                            path='/services'
+                        />
+                        <CardItem
+                            src='images/img-3.jpg'
+                            text='Set Sail in the Atlantic Ocean visiting Uncharted Waters'
+                            label='Mystery'
                             path='/services'
                         />
                     </ul>
@@ -48,4 +55,4 @@ function Cards() {
     )
 }
 
-export default Cards
+export default CardsProject

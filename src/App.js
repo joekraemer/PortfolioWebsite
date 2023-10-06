@@ -5,6 +5,7 @@ import './App.css';
 import Home from './components/pages/mains/Home'
 import Education from './components/pages/mains/Education'
 import Projects from './components/pages/mains/Projects'
+import Printer3D from './components/pages/subpages/projects/Printer3D';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route path='/' element={<Home />} />
           <Route path='/education' element={<Education />} />
           <Route path='/projects' element={<Projects />} />
+          <Route path='/projects/printer3d' element={< Printer3D />} />
         </Routes>
       </Router>
     </>
