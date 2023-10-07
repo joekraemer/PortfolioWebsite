@@ -5,6 +5,27 @@
     font-family: 'PT Sans', sans-serif;
 }
 
+h1 {
+    color: #5890B0;
+}
+
+p {
+    text-indent: 50px;
+    margin-top: 4px
+}
+
+.photo__container {
+    height: 300px;
+    margin: 10px;
+    align-content: center;
+    overflow: hidden;
+}
+
+.photo__img {
+    height: 100%;
+    object-fit: cover;
+}
+
 .home,
 .education,
 .projects {

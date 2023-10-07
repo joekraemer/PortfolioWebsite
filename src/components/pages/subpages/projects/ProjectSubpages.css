@@ -1,6 +1,12 @@
-.project__subpages {
-    padding: 4rem;
-    background: #fff;
+.project__subpages__parent {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 95%;
+    max-width: 1000px;
+    padding: 3em;
+    margin: 0 auto;
 }
 
 h1 {
