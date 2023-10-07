@@ -12,41 +12,47 @@ function CardsProject() {
                     <ul className="cards__items">
                         <CardItem
                             src="images/subpages/3dprinter/3dprinter_complete.jpg"
-                            text="I combined a variety of designs and models as well as my own ideas and modifications to create my very own 3D Printer. "
+                            text="Custom 3D Printer"
                             label='Project'
                             path='/projects/printer3d'
                         />
                         <CardItem
                             src="images/img-2.jpg"
-                            text="Travel through th islands of Bali"
+                            text="Cryptocurrency Tracker"
                             label='Luxury'
-                            path='/services'
+                            path='/projects/cryptocurrencytracker'
                         />
                         <CardItem
                             src='images/img-3.jpg'
-                            text='Set Sail in the Atlantic Ocean visiting Uncharted Waters'
+                            text='Engineers Without Borders'
                             label='Mystery'
-                            path='/services'
+                            path='/projects/ewb'
                         />
                     </ul>
                     <ul className='cards__items'>
                         <CardItem
                             src='images/img-3.jpg'
-                            text='Set Sail in the Atlantic Ocean visiting Uncharted Waters'
+                            text='One Second Videos'
                             label='Mystery'
-                            path='/services'
+                            path='/projects/onesecondvideos'
                         />
                         <CardItem
                             src='images/img-4.jpg'
-                            text='Experience Football on Top of the Himilayan Mountains'
+                            text='Playing Card Shelf'
                             label='Adventure'
-                            path='/services'
+                            path='/projects/playingcardshelf'
                         />
                         <CardItem
                             src='images/img-8.jpg'
-                            text='Ride through the Sahara Desert on a guided camel tour'
+                            text='SAE Mini Baja'
                             label='Adrenaline'
-                            path='/services'
+                            path='/projects/saeminibaja'
+                        />
+                        <CardItem
+                            src='images/img-3.jpg'
+                            text='Custom U-Lock Bike Mount'
+                            label='Mystery'
+                            path='/projects/ulockbikemount'
                         />
                     </ul>
                 </div>

@@ -11,11 +11,10 @@ function Navbar() {
   const closeMobileMenu = () => setClick(false);
 
   const showButton = () => {
-    if(window.innerWidth <= 960)
-    {
+    if (window.innerWidth <= 960) {
       setButton(false)
     }
-    else{
+    else {
       setButton(true)
     }
   }
