@@ -17,13 +17,13 @@ function CardsProject() {
                             path='/projects/printer3d'
                         />
                         <CardItem
-                            src="images/img-2.jpg"
+                            src="images/subpages/crypto/cryptocurrency_mining_rig.jpg"
                             text="Cryptocurrency Tracker"
                             label='Software'
                             path='/projects/cryptocurrencytracker'
                         />
                         <CardItem
-                            src='images/img-3.jpg'
+                            src='images/subpages/ewb/ewb_testing.jpg'
                             text='Engineers Without Borders'
                             label='Engineering'
                             path='/projects/ewb'
@@ -37,13 +37,13 @@ function CardsProject() {
                             path='/projects/onesecondvideos'
                         />
                         <CardItem
-                            src='images/img-4.jpg'
+                            src='images/subpages/cardshelf/card_shelf_complete.jpg'
                             text='Playing Card Shelf'
                             label='Maker'
                             path='/projects/playingcardshelf'
                         />
                         <CardItem
-                            src='images/img-8.jpg'
+                            src='images/subpages/baja/baja_jr_whole_car_parking.jpg'
                             text='SAE Mini Baja'
                             label='Mechanical'
                             path='/projects/saeminibaja'

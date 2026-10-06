@@ -3,8 +3,8 @@ import Navbar from './components/Navbar';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import './App.css';
 import Home from './components/pages/mains/Home'
-import Education from './components/pages/mains/Education'
 import Contact from './components/pages/mains/Contact'
+import Resume from './components/pages/mains/Resume'
 import Projects from './components/pages/mains/Projects'
 import Printer3D from './components/pages/subpages/projects/Printer3D';
 import CryptocurrencyTracker from './components/pages/subpages/projects/CryptocurrencyTracker';
@@ -21,8 +21,8 @@ function App() {
         <Navbar />
         <Routes>
           <Route path='/' element={<Home />} />
-          <Route path='/education' element={<Education />} />
           <Route path='/contact' element={<Contact />} />
+          <Route path='/resume' element={<Resume />} />
           <Route path='/projects' element={<Projects />} />
           <Route path='/projects/printer3d' element={< Printer3D />} />
           <Route path='/projects/cryptocurrencytracker' element={< CryptocurrencyTracker />} />

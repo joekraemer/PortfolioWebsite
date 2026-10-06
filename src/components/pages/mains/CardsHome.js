@@ -17,7 +17,7 @@ function CardsHome() {
                             path='/projects/printer3d'
                         />
                         <CardItem
-                            src="images/img-2.jpg"
+                            src="images/subpages/crypto/cryptocurrency_mining_rig.jpg"
                             text="Cryptocurrency price tracker"
                             label='Software'
                             path='/projects/cryptocurrencytracker'
@@ -25,19 +25,19 @@ function CardsHome() {
                     </ul>
                     <ul className='cards__items'>
                         <CardItem
-                            src='images/img-3.jpg'
+                            src='images/subpages/ewb/ewb_testing.jpg'
                             text='Engineers Without Borders field work'
                             label='Engineering'
                             path='/projects/ewb'
                         />
                         <CardItem
-                            src='images/img-8.jpg'
+                            src='images/subpages/baja/baja_jr_whole_car_parking.jpg'
                             text='SAE Mini Baja off-road vehicle'
                             label='Mechanical'
                             path='/projects/saeminibaja'
                         />
                         <CardItem
-                            src='images/img-4.jpg'
+                            src='images/subpages/cardshelf/card_shelf_complete.jpg'
                             text='Laser-cut playing card display shelf'
                             label='Maker'
                             path='/projects/playingcardshelf'

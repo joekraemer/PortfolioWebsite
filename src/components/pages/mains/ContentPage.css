@@ -93,6 +93,18 @@
     color: #fff;
 }
 
+.resume__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.resume__header h1 {
+    margin-bottom: 0.5rem;
+}
+
 .contact__links li {
     display: flex;
     align-items: baseline;
