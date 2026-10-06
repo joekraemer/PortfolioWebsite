@@ -52,6 +52,12 @@ function Navbar() {
               </Link>
             </li>
             <li className='nav-item'>
+              <a href={`${import.meta.env.BASE_URL}JoeKraemer_Resume.pdf`}
+                 className='nav-links' onClick={closeMobileMenu} download>
+                Résumé
+              </a>
+            </li>
+            <li className='nav-item'>
               <Link to='/contact' className='nav-links-mobile' onClick={closeMobileMenu}>
                 Contact
               </Link>
