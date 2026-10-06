@@ -39,6 +39,11 @@ export default function Resume() {
                         <li>Enhanced radio communication and client request handling with parallelization (mbed thread API) and a priority queue for critical data packets, lowering latency and raising throughput.</li>
                         <li>Led CI/CD pipeline development including static analysis, unit testing, and on-metal tests using mbed&rsquo;s Icetea framework to evaluate real-world radio performance and publish results to the commit as residuals.</li>
                         <li>Developed firmware for a PIC32 PID motor controller: state machine, drivers, and modules for pressure sensors, EEPROM (I2C), UART, and a PWM-controlled H-bridge.</li>
+                        <li>Implemented a custom bootloader in C for an STM32 microcontroller, handling firmware validation and firmware updates.</li>
+                        <li>Created a C UART communications API library with C++ and C# bindings.</li>
+                        <li>Used CMake to orchestrate multiple build pipelines and define build targets.</li>
+                        <li>Built a Python Flask application on an embedded Linux platform that recorded microphone data over SPI and accelerometer data over UART, paired with a phone over Bluetooth to join Wi-Fi, and served the data to a mobile app through a web server.</li>
+                        <li>Created and maintained a C# .NET WPF application (MVVM) used to demonstrate and test new product features with the client.</li>
                     </ul>
                 </div>
 
@@ -49,6 +54,31 @@ export default function Resume() {
                     </div>
                     <ul>
                         <li>Developed large-scale factory automation solutions across many industries using Siemens and Allen-Bradley PLCs and a variety of system platforms.</li>
+                    </ul>
+                </div>
+
+                <div className="content__card">
+                    <div className="content__card__head">
+                        <h2>Caterpillar Inc &mdash; Engineering Parallel Co-op</h2>
+                        <span className="content__meta">May 2014 &ndash; 2017</span>
+                    </div>
+                    <p className="content__meta">Champaign, IL</p>
+                    <ul>
+                        <li>Built an Excel tool to predict the blade angles that put a machine into natural resonance, and to study trends and configurations of previous models.</li>
+                        <li>Worked with design, supply chain, and purchasing engineers to identify appropriate branding as part of a $25 million branding initiative, and ran meetings with process engineers to validate my proposed changes.</li>
+                        <li>Wrote a VBA program to track and flag part numbers during BOM restructuring.</li>
+                    </ul>
+                </div>
+
+                <div className="content__card">
+                    <div className="content__card__head">
+                        <h2>Quadrant Tool Precision Mfg &mdash; CNC Operator, Inventory Management</h2>
+                        <span className="content__meta">May 2013 &ndash; Jan 2015</span>
+                    </div>
+                    <p className="content__meta">Schaumburg, IL</p>
+                    <ul>
+                        <li>Operated vertical and horizontal Mazak CNC mills, applying quality-control techniques to the parts produced.</li>
+                        <li>Increased usable inventory floor space by 30% by reprioritizing part locations.</li>
                     </ul>
                 </div>
 
@@ -64,8 +94,9 @@ export default function Resume() {
                     <ul>
                         <li><strong>Deep Learning</strong> &mdash; final project identified identical e-commerce product listings via text and image embeddings, clustered by similarity, trained on AWS SageMaker GPU instances.</li>
                         <li><strong>Reinforcement Learning</strong> &mdash; Deep Q-Learning agent for Lunar Lander (Experience Replay, Target Networks); PPO and QMIX for multi-agent RL in Google Football; hundreds of parallel hyperparameter trials with Ray Tune.</li>
-                        <li><strong>Data &amp; Visual Analytics</strong> &mdash; big-data collection and visualization with R, D3, Spark, Hadoop, OpenRefine; PageRank and Random Forest; Spark/Scala on AWS EMR, Databricks, Azure, GCP.</li>
+                        <li><strong>Data &amp; Visual Analytics</strong> &mdash; big-data collection and visualization with R, D3, Spark, Hadoop, OpenRefine; PageRank and Random Forest; Spark/Scala on AWS EMR, Databricks, Azure, GCP. Final project: an R/Shiny app predicting NBA spreads and over/unders with linear regression (average error of about 1.5 and 10 points).</li>
                     </ul>
+                    <p><strong>Additional coursework:</strong> Graduate Algorithms, Machine Learning, Machine Learning for Trading, AI for Robotics, Knowledge-Based AI</p>
                 </div>
 
                 <div className="content__card">
@@ -77,9 +108,58 @@ export default function Resume() {
                     <p className="content__meta">Urbana-Champaign, IL &middot; GPA 3.61</p>
                 </div>
 
+                <div className="content__card">
+                    <div className="content__card__head">
+                        <h2>Universidad de Deusto</h2>
+                        <span className="content__meta">Aug 2015 &ndash; Dec 2015</span>
+                    </div>
+                    <p className="content__subtitle">Intensive Spanish Language and Culture Immersion Program</p>
+                    <p className="content__meta">Bilbao, Spain</p>
+                </div>
+
+                <h2>Leadership &amp; Organizations</h2>
+
+                <div className="content__card">
+                    <div className="content__card__head">
+                        <h2>SAE Mini Baja &mdash; Drivetrain Subsystem Lead</h2>
+                        <span className="content__meta">Jan 2017 &ndash; May 2018</span>
+                    </div>
+                    <ul>
+                        <li>Led a team of 10 members, each owning their own design project.</li>
+                        <li>Designed a 2-stage reduction gearbox for the next year&rsquo;s car.</li>
+                        <li>Created new team standards for 3D modeling and data-driven design.</li>
+                        <li>Welded suspension members and drivetrain shafts.</li>
+                    </ul>
+                </div>
+
+                <div className="content__card">
+                    <div className="content__card__head">
+                        <h2>SAE Mini Baja &mdash; Chassis Subsystem Lead</h2>
+                        <span className="content__meta">May 2016 &ndash; Jan 2017</span>
+                    </div>
+                    <ul>
+                        <li>Designed the next-generation frame with a projected 10% weight saving.</li>
+                        <li>Designed an aluminum front suspension mount using topology optimization, cutting its weight by 50%, and verified it with FEA using loads from strain-gauge testing.</li>
+                        <li>Mentored subteam members through their projects and repaired broken A-arms, CV shafts, and brake calipers.</li>
+                    </ul>
+                </div>
+
+                <div className="content__card">
+                    <div className="content__card__head">
+                        <h2>Engineers Without Borders &mdash; Guatemala Water Project Lead</h2>
+                        <span className="content__meta">Sept 2015 &ndash; 2018</span>
+                    </div>
+                    <ul>
+                        <li>Led a team of 30 students designing a sustainable water supply system for a community of about 250 families.</li>
+                        <li>Designed a concrete spring box that captures underground water to be pumped to a storage tank.</li>
+                        <li>Traveled to Guatemala to land-survey and test the water for bacteria (3M Petrifilm) and metals (colorimeter).</li>
+                    </ul>
+                </div>
+
                 <h2>Skills</h2>
                 <div className="content__card">
-                    <p><strong>Software:</strong> Python, PyTorch, Pandas, C, C#, C++, Docker, React, JavaScript, SQL, Ansible, Git, AWS, CI/CD, Spark, PLC, Protobufs, OpenThread</p>
+                    <p><strong>Software:</strong> Python, PyTorch, Pandas, C, C#, C++, Docker, React, JavaScript, HTML, CSS, SQL, Ansible, Git, AWS, CI/CD, Spark, CMake, PLC, Protobufs, OpenThread</p>
+                    <p><strong>Mechanical &amp; CAD:</strong> SolidWorks, PTC Creo, PTC Simulate, solidThinking Inspire, FEA, topology optimization, CNC machining, welding, MATLAB, Arduino</p>
                     <p><strong>Languages:</strong> English (Native), Spanish (B2)</p>
                 </div>
 
