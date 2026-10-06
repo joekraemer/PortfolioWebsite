@@ -67,6 +67,32 @@
     padding: 0;
 }
 
+.resume__card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.resume__btn {
+    display: inline-block;
+    background: #fff;
+    color: #1a1717;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 0.6rem 1.25rem;
+    border-radius: 6px;
+    border: 1px solid #fff;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+
+.resume__btn:hover {
+    background: transparent;
+    color: #fff;
+}
+
 .contact__links li {
     display: flex;
     align-items: baseline;

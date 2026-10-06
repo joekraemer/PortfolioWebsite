@@ -1,7 +1,15 @@
 import React from 'react'
 import './ProjectSubpages.css'
+import PhotoGallery from '../../../PhotoGallery'
 
 export default function EWB() {
+
+    const ewb_photos = [
+        { src: '../images/subpages/ewb/ewb_testing.jpg', alt: 'Water testing in the field' },
+        { src: '../images/subpages/ewb/ewb_water_samples.jpg', alt: 'Collected water samples' },
+        { src: '../images/subpages/ewb/ewb_test_tubes.jpg', alt: 'Water test tubes' },
+    ];
+
     return (
         <div className="project__subpages__parent">
             <div className='project__subpages_container'>
@@ -9,6 +17,8 @@ export default function EWB() {
                 <h3> Engineers Without Borders is an organization dedicated to the sustainable development of areas in need. </h3>
 
                 <div className='project__subpages__content'>
+                    <PhotoGallery photos={ewb_photos} />
+
                     <p>I have been a member of Engineers Without Borders (EWB) since my first semester of college.  I wanted to use my technical knowledge to help other people.  We have multiple projects in our chapter, but I decided to join the Guatemala Water Project.  The project was trying to help a small community in Guatemala build a water system to account for the shortage of water during the dry season
 
                         When I started, our project was still in the assessment phase.  This meant that we were still deciding on our best plan of action.  During this time, we ran high level design and analysis to compare costs, sustainability, and difficulty of various methods.  I was a part of a team that investigated using a pump to extract water from a 100 ft deep ravine.

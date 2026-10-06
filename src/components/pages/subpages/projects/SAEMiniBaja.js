@@ -1,7 +1,29 @@
 import React from 'react'
 import './ProjectSubpages.css'
+import PhotoGallery from '../../../PhotoGallery'
 
 export default function SAEMiniBaja() {
+
+    const design_photos = [
+        { src: '../images/subpages/baja/baja_jr_truss_cad.jpg', alt: 'Truss CAD design' },
+        { src: '../images/subpages/baja/baja_jr_truss_cad_final.jpg', alt: 'Final truss CAD design' },
+        { src: '../images/subpages/baja/baja_jr_truss_fea_initial.jpg', alt: 'Initial truss FEA analysis' },
+        { src: '../images/subpages/baja/baja_jr_truss_fea_final.jpg', alt: 'Final truss FEA analysis' },
+    ];
+
+    const frame_photos = [
+        { src: '../images/subpages/baja/baja_jr_frame.jpg', alt: 'Baja chassis frame' },
+        { src: '../images/subpages/baja/baja_jr_frame_side.jpg', alt: 'Chassis frame side view' },
+        { src: '../images/subpages/baja/baja_jr_frame_fae.jpg', alt: 'Chassis frame FEA' },
+        { src: '../images/subpages/baja/baja_jr_frame_engine.jpg', alt: 'Chassis frame with engine' },
+        { src: '../images/subpages/baja/baja_jr_frame_painted.jpg', alt: 'Painted chassis frame' },
+    ];
+
+    const car_photos = [
+        { src: '../images/subpages/baja/baja_jr_whole_car_parking.jpg', alt: 'Completed Baja car' },
+        { src: '../images/subpages/baja/baja_jr_whole_car_dirt.jpg', alt: 'Baja car on the dirt course' },
+    ];
+
     return (
         <div className="project__subpages__parent">
             <div className='project__subpages_container'>
@@ -9,6 +31,8 @@ export default function SAEMiniBaja() {
                 <h3> We design, build and compete a brand new off road racing vehicle every year </h3>
 
                 <div className='project__subpages__content'>
+                    <PhotoGallery photos={car_photos} />
+
                     <p>SAE Mini-Baja is my favorite club.  It provides me with awesome opportunities to apply concepts that I learn from classes to the real world.  I love that I get hands on experience with designing and manufacturing.  During the beginning of my membership, I spent most of my time working in the shop.  I was trained on all the tools and was put to work manufacturing and assembling parts, as well as doing repairs and maintenance.  I loved this time because I learned so much.  Most of the time I was working along side an upperclassmen who would guide me and answer all the questions I had.  It was great to obtain some of the vast knowledge they have.  I learned all the different parts of the car and their function. They taught me tips and tricks for building and assembling.  They showed me the ins and outs of the SAE Mini-Baja rules and the different design decisions teams make.
 
                         Recently I have been involved much more in the design work.  In spring I was given the position of Chassis Sub-Team Lead.  This meant that I was in charge of designing the chassis as well as guiding the rest of the sub-team.  In order to accelerate our timeline, our team decided to push our design freeze from November to September.  This change would allow us to have two extra months for testing and validation before our competitions in the Spring.  So I spent my summer designing the new chassis.
@@ -21,11 +45,15 @@ export default function SAEMiniBaja() {
 
                     <p>After ensuring that my design was within the rules as well as compatible with our components, I used PTC Simulate to validate my design.  I ran FEA analysis for various situations such as a front end impact, roll over, side impact, one wheel touch down, and rear impact. Through all of my simulation I verified that all of the chassis is well within a factor of safety of 3. FMEA was used to validate the results of the simulations. </p>
 
+                    <PhotoGallery photos={design_photos} />
+
                     <p>Perhaps my most difficult challenge was mounting the shocks.  Our captain chose a vastly different mounting style where the shocks are mounted much closer to the wheel.  This means that the shock will travel from a 45 degree angle at rest to horizontal in full compression.  This is a much wider range than a traditional style, thus the mounts must be more reinforced.  The real bump in the road was that the shock point was not near any of the chassis members.  I couldn't change the design to accommodate the shocks without breaking one of the rules.  I mulled over this problem for most of the summer and ended up deciding that I would design an arching truss that would mount to the side impact member.  This would create more space in the foot box for the pedals and also cancel out some of the symmetric lateral forces when the shocks compress.</p>
 
                     <p>After some quick calculations, it was obvious that aluminum would be the best material of choice because of the large weight savings.  Since aluminum can’t be welded to a steel frame we would attach it with a series of tabs.  An added bonus is that we can test different designs and swap them out easily.  I went back and forth between Creo and Simulate optimizing the design. My original design was very lean and under built.  After running FEA, I quickly realized that it needed to be beefed up. We decided to aim for a factor of safety of 4 because we wanted the first design to be solid and reliable before we tried to optimize.</p>
 
                     <p>I used the results of my FEA analysis to target the weak spots.  I opted for a thicker aluminum plate on the bottom to deal with the massive compression forces when the suspension loads are at zero degrees.  In addition, I thickened the bottom of the side plates to help out with distributing the compressive forces.  With these changes, the truss became much stronger and now is built at a factor of safety of about 4.5.</p>
+
+                    <PhotoGallery photos={frame_photos} />
 
                     <p>After many hours of measuring, profiling and welding, the chassis was finally complete.  The chassis was completed over a month earlier that last year.  The paint for this year is a stealthy matte black.</p>
 

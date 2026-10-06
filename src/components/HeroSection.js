@@ -7,6 +7,7 @@ function HeroSection() {
   return (
     <div className='hero-container'>
         <video src={`${import.meta.env.BASE_URL}videos/video-2.mp4`} autoPlay loop muted/>
+        <img className='hero-avatar' src={`${import.meta.env.BASE_URL}images/profile.jpg`} alt='Joe Kraemer' />
         <h1>Joe Kraemer</h1>
         <p>Software Engineer at Blue Origin &mdash; mechanical engineer turned
           software engineer, building flight-software test systems for the Lunar Lander.</p>

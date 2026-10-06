@@ -12,6 +12,18 @@ export default function Contact() {
                     everything in between. The best way to reach me is email.
                 </p>
 
+                <div className="content__card resume__card">
+                    <div>
+                        <span className="content__subtitle">Résumé</span>
+                        <p className="content__meta">Grab a PDF copy of my full résumé.</p>
+                    </div>
+                    <a className="resume__btn"
+                       href={`${import.meta.env.BASE_URL}JoeKraemer_Resume.pdf`}
+                       download>
+                        Download Résumé
+                    </a>
+                </div>
+
                 <div className="content__card">
                     <ul className="contact__links">
                         <li>
