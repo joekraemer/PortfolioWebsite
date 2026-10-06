@@ -13,19 +13,19 @@ function CardsProject() {
                         <CardItem
                             src="images/subpages/3dprinter/3dprinter_complete.jpg"
                             text="Custom 3D Printer"
-                            label='Project'
+                            label='Hardware'
                             path='/projects/printer3d'
                         />
                         <CardItem
                             src="images/img-2.jpg"
                             text="Cryptocurrency Tracker"
-                            label='Luxury'
+                            label='Software'
                             path='/projects/cryptocurrencytracker'
                         />
                         <CardItem
                             src='images/img-3.jpg'
                             text='Engineers Without Borders'
-                            label='Mystery'
+                            label='Engineering'
                             path='/projects/ewb'
                         />
                     </ul>
@@ -33,25 +33,25 @@ function CardsProject() {
                         <CardItem
                             src='images/img-3.jpg'
                             text='One Second Videos'
-                            label='Mystery'
+                            label='Software'
                             path='/projects/onesecondvideos'
                         />
                         <CardItem
                             src='images/img-4.jpg'
                             text='Playing Card Shelf'
-                            label='Adventure'
+                            label='Maker'
                             path='/projects/playingcardshelf'
                         />
                         <CardItem
                             src='images/img-8.jpg'
                             text='SAE Mini Baja'
-                            label='Adrenaline'
+                            label='Mechanical'
                             path='/projects/saeminibaja'
                         />
                         <CardItem
                             src='images/img-3.jpg'
                             text='Custom U-Lock Bike Mount'
-                            label='Mystery'
+                            label='Mechanical'
                             path='/projects/ulockbikemount'
                         />
                     </ul>

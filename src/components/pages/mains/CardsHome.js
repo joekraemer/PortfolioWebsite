@@ -2,44 +2,45 @@ import React from 'react'
 import CardItem from '../../CardItem'
 import '../../Cards.css'
 
+
 function CardsHome() {
     return (
         <div className='cards'>
-            <h1>Check out these EPIC destinations</h1>
+            <h1>Featured Projects</h1>
             <div className="cards__container">
                 <div className="cards__wrapper">
                     <ul className="cards__items">
                         <CardItem
-                            src="images/img-9.jpg"
-                            text="Expore the hidden waterfall in the amazon jungle"
-                            label='Adventure'
-                            path='/services'
+                            src="images/subpages/3dprinter/3dprinter_complete.jpg"
+                            text="Custom RepRap 3D Printer built from sourced parts"
+                            label='Hardware'
+                            path='/projects/printer3d'
                         />
                         <CardItem
                             src="images/img-2.jpg"
-                            text="Travel through th islands of Bali"
-                            label='Luxury'
-                            path='/services'
+                            text="Cryptocurrency price tracker"
+                            label='Software'
+                            path='/projects/cryptocurrencytracker'
                         />
                     </ul>
                     <ul className='cards__items'>
                         <CardItem
                             src='images/img-3.jpg'
-                            text='Set Sail in the Atlantic Ocean visiting Uncharted Waters'
-                            label='Mystery'
-                            path='/services'
-                        />
-                        <CardItem
-                            src='images/img-4.jpg'
-                            text='Experience Football on Top of the Himilayan Mountains'
-                            label='Adventure'
-                            path='/services'
+                            text='Engineers Without Borders field work'
+                            label='Engineering'
+                            path='/projects/ewb'
                         />
                         <CardItem
                             src='images/img-8.jpg'
-                            text='Ride through the Sahara Desert on a guided camel tour'
-                            label='Adrenaline'
-                            path='/services'
+                            text='SAE Mini Baja off-road vehicle'
+                            label='Mechanical'
+                            path='/projects/saeminibaja'
+                        />
+                        <CardItem
+                            src='images/img-4.jpg'
+                            text='Laser-cut playing card display shelf'
+                            label='Maker'
+                            path='/projects/playingcardshelf'
                         />
                     </ul>
                 </div>
