@@ -2,6 +2,7 @@
   "name": "react-website-personal",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://joekraemer.github.io/PortfolioWebsite",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",

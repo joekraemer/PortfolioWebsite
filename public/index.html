@@ -20,6 +20,24 @@
     rel="stylesheet"
   />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <!-- Start Single Page Apps for GitHub Pages -->
+    <!-- https://github.com/rafgraph/spa-github-pages -->
+    <script type="text/javascript">
+      // Decodes the "/?/" redirect produced by 404.html back into a normal
+      // SPA route before the app's bundle loads, so deep links and refreshes
+      // on GitHub Pages resolve correctly.
+      (function (l) {
+        if (l.search[1] === '/') {
+          var decoded = l.search.slice(1).split('&').map(function (s) {
+            return s.replace(/~and~/g, '&');
+          }).join('?');
+          window.history.replaceState(null, null,
+            l.pathname.slice(0, -1) + decoded + l.hash
+          );
+        }
+      }(window.location));
+    </script>
+    <!-- End Single Page Apps for GitHub Pages -->
     <!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.

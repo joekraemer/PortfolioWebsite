@@ -16,7 +16,7 @@ import ULockBikeMount from './components/pages/subpages/projects/ULockBikeMount'
 function App() {
   return (
     <>
-      <Router>
+      <Router basename={process.env.PUBLIC_URL}>
         <Navbar />
         <Routes>
           <Route path='/' element={<Home />} />
