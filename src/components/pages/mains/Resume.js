@@ -156,18 +156,6 @@ export default function Resume() {
                     </ul>
                 </div>
 
-                <h2>Personal Projects</h2>
-
-                <div className="content__card">
-                    <div className="content__card__head">
-                        <h2>AWS Stock Video Tagger</h2>
-                    </div>
-                    <ul>
-                        <li>Asynchronously uploads videos to S3 and starts Rekognition jobs, parallelized with threading and AWS SNS.</li>
-                        <li>Saves the highest-confidence tags to a CSV for upload to stock video sites.</li>
-                    </ul>
-                </div>
-
                 <h2>Skills</h2>
                 <div className="content__card">
                     <p><strong>Software:</strong> Python, PyTorch, Pandas, C, C#, C++, Docker, React, JavaScript, HTML, CSS, SQL, Ansible, Git, AWS, CI/CD, Spark, CMake, PLC, Protobufs, OpenThread</p>
