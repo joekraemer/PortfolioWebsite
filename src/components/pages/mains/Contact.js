@@ -1,0 +1,47 @@
+import React from 'react'
+import '../../../App.css'
+import './ContentPage.css'
+
+export default function Contact() {
+    return (
+        <div className="content__page">
+            <div className="content__page__inner">
+                <h1>Contact</h1>
+                <p>
+                    I&rsquo;m always happy to talk about software, hardware, and
+                    everything in between. The best way to reach me is email.
+                </p>
+
+                <div className="content__card">
+                    <ul className="contact__links">
+                        <li>
+                            <span className="contact__label">Email</span>
+                            <a href="mailto:jkraemer9@gmail.com">jkraemer9@gmail.com</a>
+                        </li>
+                        <li>
+                            <span className="contact__label">LinkedIn</span>
+                            <a href="https://www.linkedin.com/in/kraemerjoe"
+                               target="_blank" rel="noopener noreferrer">
+                                linkedin.com/in/kraemerjoe
+                            </a>
+                        </li>
+                        <li>
+                            <span className="contact__label">GitHub</span>
+                            <a href="https://github.com/joekraemer"
+                               target="_blank" rel="noopener noreferrer">
+                                github.com/joekraemer
+                            </a>
+                        </li>
+                        <li>
+                            <span className="contact__label">Instagram</span>
+                            <a href="https://www.instagram.com/jak_creative_"
+                               target="_blank" rel="noopener noreferrer">
+                                @jak_creative_
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    )
+}

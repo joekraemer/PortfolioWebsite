@@ -1,0 +1,108 @@
+.content__page {
+    min-height: calc(100vh - 80px);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background: #1a1717;
+    color: #fff;
+}
+
+.content__page__inner {
+    width: 95%;
+    max-width: 900px;
+    padding: 3rem 1.5rem;
+}
+
+.content__page h1 {
+    text-align: left;
+    font-size: 2.75rem;
+    margin-bottom: 1.5rem;
+}
+
+.content__card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 1.5rem 1.75rem;
+    margin-bottom: 1.5rem;
+}
+
+.content__card__head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.content__card h2 {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.content__subtitle {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0.5rem 0 0.25rem;
+}
+
+.content__meta {
+    color: #bdbdbd;
+    font-size: 0.95rem;
+}
+
+.content__card ul {
+    margin: 1rem 0 0;
+    padding-left: 1.25rem;
+    line-height: 1.6;
+}
+
+.content__card li {
+    margin-bottom: 0.75rem;
+}
+
+.contact__links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.contact__links li {
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+    padding: 0.65rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.contact__links li:last-child {
+    border-bottom: none;
+}
+
+.contact__label {
+    flex: 0 0 90px;
+    color: #bdbdbd;
+    font-size: 0.95rem;
+}
+
+.contact__links a {
+    color: #fff;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s ease;
+}
+
+.contact__links a:hover {
+    border-bottom-color: #fff;
+}
+
+@media screen and (max-width: 600px) {
+    .content__page h1 {
+        font-size: 2rem;
+    }
+
+    .contact__links li {
+        flex-direction: column;
+        gap: 0.15rem;
+    }
+}
