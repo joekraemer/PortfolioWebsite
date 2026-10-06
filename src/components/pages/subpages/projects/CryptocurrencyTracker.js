@@ -1,7 +1,16 @@
 import React from 'react'
 import './ProjectSubpages.css'
+import PhotoGallery from '../../../PhotoGallery'
 
 export default function CryptocurrencyTracker() {
+
+    const crypto_photos = [
+        { src: '../images/subpages/crypto/cryptocurrency_mining_rig.jpg', alt: 'GPU mining rig' },
+        { src: '../images/subpages/crypto/cryptocurrency_revenue.jpg', alt: 'Revenue chart' },
+        { src: '../images/subpages/crypto/cryptocurrency_monthly_profitability.jpg', alt: 'Monthly profitability chart' },
+        { src: '../images/subpages/crypto/cryptocurrency_equity_location.jpg', alt: 'Equity location chart' },
+    ];
+
     return (
         <div className="project__subpages__parent">
             <div className='project__subpages_container'>
@@ -30,9 +39,7 @@ export default function CryptocurrencyTracker() {
                         My dad was happy to see that my investment was a success and I am excited to see how much more the cryptocurrency community will grow.
                     </p>
 
-                    <> Image </>
-                    <> Image </>
-                    <> Image </>
+                    <PhotoGallery photos={crypto_photos} />
                 </div>
             </div>
         </div>
