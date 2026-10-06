@@ -30,7 +30,7 @@ function Navbar() {
       <nav className='navbar'>
         <div className='navbar-container'>
           <Link to="/" className="navbar-logo">
-            TRVL <i className='fab fa-typo3' />
+            Joe Kraemer
           </Link>
           <div className='menu-icon' onClick={handleClick}>
             <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
@@ -57,7 +57,7 @@ function Navbar() {
               </Link>
             </li>
           </ul>
-          {button && <Button buttonStyle='btn--outline'>Contact</Button>}
+          {button && <Button buttonStyle='btn--outline' to='/contact'>Contact</Button>}
         </div>
       </nav>
     </>
