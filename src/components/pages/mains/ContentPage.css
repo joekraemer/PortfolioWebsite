@@ -229,3 +229,64 @@
         width: 95%;
     }
 }
+
+/* Resume: Skills chips and Interests tiles */
+.skills__group {
+    margin-bottom: 1.1rem;
+}
+
+.skills__group:last-child {
+    margin-bottom: 0;
+}
+
+.skills__heading {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #bdbdbd;
+    margin: 0 0 0.5rem;
+}
+
+.content__card .skills__chips,
+.interests__tiles {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    line-height: normal;
+}
+
+.skills__chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+}
+
+.content__card .skills__chip {
+    margin: 0;
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 999px;
+    padding: 0.3rem 0.8rem;
+    font-size: 0.95rem;
+}
+
+.interests__tiles {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 0.8rem;
+}
+
+.interests__tile {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 1.1rem 0.8rem;
+    text-align: center;
+    font-weight: 700;
+}
+
+.interests__tile i {
+    display: block;
+    font-size: 1.7rem;
+    margin-bottom: 0.55rem;
+}
