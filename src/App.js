@@ -15,29 +15,29 @@ import SAEMiniBaja from './components/pages/subpages/projects/SAEMiniBaja';
 import ULockBikeMount from './components/pages/subpages/projects/ULockBikeMount';
 import NotFound from './components/pages/mains/NotFound';
 import ScrollToTop from './components/ScrollToTop';
+import RouteTitle from './components/RouteTitle';
 
 function App() {
   return (
-    <>
-      <Router basename={import.meta.env.BASE_URL}>
-        <ScrollToTop />
-        <Navbar />
-        <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/contact' element={<Contact />} />
-          <Route path='/resume' element={<Resume />} />
-          <Route path='/projects' element={<Projects />} />
-          <Route path='/projects/printer3d' element={< Printer3D />} />
-          <Route path='/projects/cryptocurrencytracker' element={< CryptocurrencyTracker />} />
-          <Route path='/projects/ewb' element={< EWB />} />
-          <Route path='/projects/onesecondvideos' element={< OneSecondVideos />} />
-          <Route path='/projects/playingcardshelf' element={< PlayingCardShelf />} />
-          <Route path='/projects/saeminibaja' element={< SAEMiniBaja />} />
-          <Route path='/projects/ulockbikemount' element={< ULockBikeMount />} />
-          <Route path='*' element={<NotFound />} />
-        </Routes>
-      </Router>
-    </>
+    <Router basename={import.meta.env.BASE_URL}>
+      <ScrollToTop />
+      <RouteTitle />
+      <Navbar />
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/contact' element={<Contact />} />
+        <Route path='/resume' element={<Resume />} />
+        <Route path='/projects' element={<Projects />} />
+        <Route path='/projects/printer3d' element={< Printer3D />} />
+        <Route path='/projects/cryptocurrencytracker' element={< CryptocurrencyTracker />} />
+        <Route path='/projects/ewb' element={< EWB />} />
+        <Route path='/projects/onesecondvideos' element={< OneSecondVideos />} />
+        <Route path='/projects/playingcardshelf' element={< PlayingCardShelf />} />
+        <Route path='/projects/saeminibaja' element={< SAEMiniBaja />} />
+        <Route path='/projects/ulockbikemount' element={< ULockBikeMount />} />
+        <Route path='*' element={<NotFound />} />
+      </Routes>
+    </Router>
   );
 }
 
