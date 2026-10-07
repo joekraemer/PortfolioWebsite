@@ -1,5 +1,6 @@
 import React from 'react'
 import './PhotoGallery.css'
+import asset from '../asset'
 
 function PhotoGallery({ photos }) {
     return (
@@ -7,7 +8,7 @@ function PhotoGallery({ photos }) {
             <div className="photo-gallery__container">
                 {photos.map((photo, index) => (
                     <div className="photo-gallery__img__container" key={index}>
-                        <img className="photo-gallery__img" src={photo.src} alt={photo.alt} />
+                        <img className="photo-gallery__img" src={asset(photo.src)} alt={photo.alt} />
                     </div>
                 ))}
             </div>
