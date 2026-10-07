@@ -17,26 +17,35 @@ import NotFound from './components/pages/mains/NotFound';
 import ScrollToTop from './components/ScrollToTop';
 import RouteTitle from './components/RouteTitle';
 
+// Move focus to the page content without changing the URL hash (#64).
+function skipToContent(event) {
+  event.preventDefault();
+  document.getElementById("main-content")?.focus();
+}
+
 function App() {
   return (
     <Router basename={import.meta.env.BASE_URL}>
       <ScrollToTop />
       <RouteTitle />
+      <a href="#main-content" className="skip-link" onClick={skipToContent}>Skip to content</a>
       <Navbar />
-      <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/contact' element={<Contact />} />
-        <Route path='/resume' element={<Resume />} />
-        <Route path='/projects' element={<Projects />} />
-        <Route path='/projects/printer3d' element={< Printer3D />} />
-        <Route path='/projects/cryptocurrencytracker' element={< CryptocurrencyTracker />} />
-        <Route path='/projects/ewb' element={< EWB />} />
-        <Route path='/projects/onesecondvideos' element={< OneSecondVideos />} />
-        <Route path='/projects/playingcardshelf' element={< PlayingCardShelf />} />
-        <Route path='/projects/saeminibaja' element={< SAEMiniBaja />} />
-        <Route path='/projects/ulockbikemount' element={< ULockBikeMount />} />
-        <Route path='*' element={<NotFound />} />
-      </Routes>
+      <main id="main-content" tabIndex="-1">
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/contact' element={<Contact />} />
+          <Route path='/resume' element={<Resume />} />
+          <Route path='/projects' element={<Projects />} />
+          <Route path='/projects/printer3d' element={< Printer3D />} />
+          <Route path='/projects/cryptocurrencytracker' element={< CryptocurrencyTracker />} />
+          <Route path='/projects/ewb' element={< EWB />} />
+          <Route path='/projects/onesecondvideos' element={< OneSecondVideos />} />
+          <Route path='/projects/playingcardshelf' element={< PlayingCardShelf />} />
+          <Route path='/projects/saeminibaja' element={< SAEMiniBaja />} />
+          <Route path='/projects/ulockbikemount' element={< ULockBikeMount />} />
+          <Route path='*' element={<NotFound />} />
+        </Routes>
+      </main>
     </Router>
   );
 }

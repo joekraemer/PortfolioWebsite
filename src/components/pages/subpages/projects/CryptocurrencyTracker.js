@@ -14,7 +14,7 @@ export default function CryptocurrencyTracker() {
         <div className="project__subpages__parent">
             <div className='project__subpages_container'>
                 <h1>Cryptocurrency Tracker</h1>
-                <h3> I wrote a python script to track cryptocurrency prices as well as the profitability of my personal mining rig. </h3>
+                <p className="project__subtitle">I wrote a python script to track cryptocurrency prices as well as the profitability of my personal mining rig.</p>
 
                 <div className='project__subpages__content'>
 

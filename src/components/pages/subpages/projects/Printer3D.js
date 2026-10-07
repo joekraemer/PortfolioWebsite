@@ -20,7 +20,7 @@ export default function Printer3D() {
         <div className="project__subpages__parent">
             <div className='project__subpages_container'>
                 <h1>3D Printer</h1>
-                <h3 > I combined a variety of designs and models as well as my own ideas and modifications to create my very own 3D Printer. </h3>
+                <p className="project__subtitle">I combined a variety of designs and models as well as my own ideas and modifications to create my very own 3D Printer.</p>
 
                 <div className='project__subpages__content'>
 

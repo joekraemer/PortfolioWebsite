@@ -5,7 +5,7 @@ export default function ULockBikeMount() {
         <div className="project__subpages__parent">
             <div className='project__subpages_container'>
                 <h1>U-Lock Bike Mount</h1>
-                <h3> I designed and manufactured my very own custom lock mount. </h3>
+                <p className="project__subtitle">I designed and manufactured my very own custom lock mount.</p>
 
                 <div className='project__subpages__content'>
 

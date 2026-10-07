@@ -17,3 +17,12 @@
 .project__subpages__parent p {
     margin-bottom: 1em;
 }
+
+/* One-line page subtitle. A paragraph, not a heading (#65); styled to match
+   the h3 it replaced. */
+.project__subpages__parent p.project__subtitle {
+    font-size: 1.17em;
+    font-weight: 700;
+    line-height: 1.25;
+    margin: 0;
+}

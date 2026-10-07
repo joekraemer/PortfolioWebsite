@@ -27,7 +27,7 @@ export default function PlayingCardShelf() {
         <div className="project__subpages__parent">
             <div className='project__subpages_container'>
                 <h1>Playing Card Shelf</h1>
-                <h3> I created a custom floating shelf for displaying boutique playing cards. </h3>
+                <p className="project__subtitle">I created a custom floating shelf for displaying boutique playing cards.</p>
 
                 <div className='project__subpages__content'>
                     <PhotoGallery photos={title_photos} />
