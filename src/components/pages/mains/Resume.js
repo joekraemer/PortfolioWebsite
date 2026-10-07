@@ -31,55 +31,35 @@ export default function Resume() {
 
                 <div className="content__card">
                     <div className="content__card__head">
-                        <h2>DMC Inc &mdash; Systems Engineer II</h2>
-                        <span className="content__meta">Jun 2020 &ndash; Feb 2022</span>
+                        <h2>DMC Inc</h2>
+                        <span className="content__meta">Sept 2018 &ndash; Feb 2022</span>
                     </div>
-                    <ul>
-                        <li>Managed and executed all phases of the project life-cycle: sales, customer relationship, requirements and specifications, architecture, hardware selection, programming, testing, onsite deployment, and post-project support.</li>
-                        <li>Enhanced radio communication and client request handling with parallelization (mbed thread API) and a priority queue for critical data packets, lowering latency and raising throughput.</li>
-                        <li>Led CI/CD pipeline development including static analysis, unit testing, and on-metal tests using mbed&rsquo;s Icetea framework to evaluate real-world radio performance and publish results to the commit as residuals.</li>
-                        <li>Developed firmware for a PIC32 PID motor controller: state machine, drivers, and modules for pressure sensors, EEPROM (I2C), UART, and a PWM-controlled H-bridge.</li>
-                        <li>Implemented a custom bootloader in C for an STM32 microcontroller, handling firmware validation and firmware updates.</li>
-                        <li>Created a C UART communications API library with C++ and C# bindings.</li>
-                        <li>Used CMake to orchestrate multiple build pipelines and define build targets.</li>
-                        <li>Built a Python Flask application on an embedded Linux platform that recorded microphone data over SPI and accelerometer data over UART, paired with a phone over Bluetooth to join Wi-Fi, and served the data to a mobile app through a web server.</li>
-                        <li>Created and maintained a C# .NET WPF application (MVVM) used to demonstrate and test new product features with the client.</li>
-                    </ul>
-                </div>
-
-                <div className="content__card">
-                    <div className="content__card__head">
-                        <h2>DMC Inc &mdash; Systems Engineer I</h2>
-                        <span className="content__meta">Sep 2018 &ndash; Jun 2020</span>
+                    <div className="content__role">
+                        <div className="content__card__head">
+                            <h3>Systems Engineer II</h3>
+                            <span className="content__meta">Jun 2020 &ndash; Feb 2022</span>
+                        </div>
+                        <ul>
+                            <li>Managed and executed all phases of the project life-cycle: sales, customer relationship, requirements and specifications, architecture, hardware selection, programming, testing, onsite deployment, and post-project support.</li>
+                            <li>Enhanced radio communication and client request handling with parallelization (mbed thread API) and a priority queue for critical data packets, lowering latency and raising throughput.</li>
+                            <li>Led CI/CD pipeline development including static analysis, unit testing, and on-metal tests using mbed&rsquo;s Icetea framework to evaluate real-world radio performance and publish results to the commit as residuals.</li>
+                            <li>Developed firmware for a PIC32 PID motor controller: state machine, drivers, and modules for pressure sensors, EEPROM (I2C), UART, and a PWM-controlled H-bridge.</li>
+                            <li>Implemented a custom bootloader in C for an STM32 microcontroller, handling firmware validation and firmware updates.</li>
+                            <li>Created a C UART communications API library with C++ and C# bindings.</li>
+                            <li>Used CMake to orchestrate multiple build pipelines and define build targets.</li>
+                            <li>Built a Python Flask application on an embedded Linux platform that recorded microphone data over SPI and accelerometer data over UART, paired with a phone over Bluetooth to join Wi-Fi, and served the data to a mobile app through a web server.</li>
+                            <li>Created and maintained a C# .NET WPF application (MVVM) used to demonstrate and test new product features with the client.</li>
+                        </ul>
                     </div>
-                    <ul>
-                        <li>Developed large-scale factory automation solutions across many industries using Siemens and Allen-Bradley PLCs and a variety of system platforms.</li>
-                    </ul>
-                </div>
-
-                <div className="content__card">
-                    <div className="content__card__head">
-                        <h2>Caterpillar Inc &mdash; Engineering Parallel Co-op</h2>
-                        <span className="content__meta">May 2014 &ndash; 2017</span>
+                    <div className="content__role">
+                        <div className="content__card__head">
+                            <h3>Systems Engineer I</h3>
+                            <span className="content__meta">Sept 2018 &ndash; Jun 2020</span>
+                        </div>
+                        <ul>
+                            <li>Developed large-scale factory automation solutions across many industries using Siemens and Allen-Bradley PLCs and a variety of system platforms.</li>
+                        </ul>
                     </div>
-                    <p className="content__meta">Champaign, IL</p>
-                    <ul>
-                        <li>Built an Excel tool to predict the blade angles that put a machine into natural resonance, and to study trends and configurations of previous models.</li>
-                        <li>Worked with design, supply chain, and purchasing engineers to identify appropriate branding as part of a $25 million branding initiative, and ran meetings with process engineers to validate my proposed changes.</li>
-                        <li>Wrote a VBA program to track and flag part numbers during BOM restructuring.</li>
-                    </ul>
-                </div>
-
-                <div className="content__card">
-                    <div className="content__card__head">
-                        <h2>Quadrant Tool Precision Mfg &mdash; CNC Operator, Inventory Management</h2>
-                        <span className="content__meta">May 2013 &ndash; Jan 2015</span>
-                    </div>
-                    <p className="content__meta">Schaumburg, IL</p>
-                    <ul>
-                        <li>Operated vertical and horizontal Mazak CNC mills, applying quality-control techniques to the parts produced.</li>
-                        <li>Increased usable inventory floor space by 30% by reprioritizing part locations.</li>
-                    </ul>
                 </div>
 
                 <h2>Education</h2>
@@ -102,7 +82,7 @@ export default function Resume() {
                 <div className="content__card">
                     <div className="content__card__head">
                         <h2>University of Illinois at Urbana-Champaign</h2>
-                        <span className="content__meta">May 2018</span>
+                        <span className="content__meta">Aug 2013 &ndash; May 2018</span>
                     </div>
                     <p className="content__subtitle">B.S. in Mechanical Engineering &mdash; Minor: Spanish Language</p>
                     <p className="content__meta">Urbana-Champaign, IL &middot; GPA 3.61</p>
