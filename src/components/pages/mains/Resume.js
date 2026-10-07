@@ -83,8 +83,22 @@ export default function Resume() {
 
                 <div className="content__card">
                     <div className="content__card__head">
+                        <h2>Amazon &mdash; Software Development Engineer</h2>
+                        <span className="content__meta">May 2025 &ndash; Present</span>
+                    </div>
+                    <p className="content__meta">Project Kuiper / Amazon Leo, Ground Segment Software</p>
+                    <ul>
+                        <li>Built hardware-in-the-loop test infrastructure from the ground up (Rust, Docker, CI), including the organization&rsquo;s first automated on-hardware test gating at code-review time, and improved existing pipeline reliability (2x faster test setup, failure diagnostics capture).</li>
+                        <li>Led a cross-team, green-field integration between a network control plane and an embedded encryption engine, owning the architecture, wire-protocol schema (Cap&rsquo;n Proto), and client implementation through to the first end-to-end validation on hardware.</li>
+                        <li>Designed and implemented a liveness-detection protocol for a hardware-accelerated encryption appliance on high-throughput satellite ground links, eliminating a class of silent multi-minute outages on peer failure.</li>
+                        <li>Authored technical designs adopted by the team, including a plugin-based power-on self-test framework for embedded hardware, and contributed shared developer tooling used across multiple engineering teams.</li>
+                    </ul>
+                </div>
+
+                <div className="content__card">
+                    <div className="content__card__head">
                         <h2>Blue Origin &mdash; Software Engineer II</h2>
-                        <span className="content__meta">Apr 2024 &ndash; Present</span>
+                        <span className="content__meta">Apr 2024 &ndash; May 2025</span>
                     </div>
                     <ul>
                         <li>Contributed to development and maintenance of the Lunar Lander HIL (Hardware-in-the-Loop) using agile methodologies, enabling early system-level testing that integrates flight-like hardware with actual flight software for comprehensive verification before flight release.</li>
