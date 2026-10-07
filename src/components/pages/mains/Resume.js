@@ -1,19 +1,85 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import '../../../App.css'
 import './ContentPage.css'
+
+const SECTIONS = [
+    { id: 'experience', label: 'Work Experience' },
+    { id: 'education', label: 'Education' },
+    { id: 'leadership', label: 'Leadership & Organizations' },
+    { id: 'skills', label: 'Skills' },
+    { id: 'interests', label: 'Interests' },
+]
+
+// Offset below the sticky 80px navbar at which a heading counts as "current".
+const ACTIVE_OFFSET = 120
+
+function ResumeNav() {
+    const [active, setActive] = useState(SECTIONS[0].id)
+
+    useEffect(() => {
+        const onScroll = () => {
+            // At the bottom of the page the last sections can't reach the top,
+            // so treat the final section as active there.
+            if (window.innerHeight + window.scrollY >= document.body.scrollHeight - 2) {
+                setActive(SECTIONS[SECTIONS.length - 1].id)
+                return
+            }
+            let current = SECTIONS[0].id
+            for (const { id } of SECTIONS) {
+                const el = document.getElementById(id)
+                if (el && el.getBoundingClientRect().top <= ACTIVE_OFFSET) current = id
+            }
+            setActive(current)
+        }
+        onScroll()
+        window.addEventListener('scroll', onScroll, { passive: true })
+        window.addEventListener('resize', onScroll)
+        return () => {
+            window.removeEventListener('scroll', onScroll)
+            window.removeEventListener('resize', onScroll)
+        }
+    }, [])
+
+    const jump = (e, id) => {
+        e.preventDefault()
+        const el = document.getElementById(id)
+        if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    }
+
+    return (
+        <nav className="resume__nav" aria-label="Résumé sections">
+            <ul>
+                {SECTIONS.map(({ id, label }) => (
+                    <li key={id}>
+                        <a
+                            href={`#${id}`}
+                            className={active === id ? 'resume__nav__link active' : 'resume__nav__link'}
+                            aria-current={active === id ? 'true' : undefined}
+                            onClick={(e) => jump(e, id)}
+                        >
+                            {label}
+                        </a>
+                    </li>
+                ))}
+            </ul>
+        </nav>
+    )
+}
 
 export default function Resume() {
     const pdf = `${import.meta.env.BASE_URL}JoeKraemer_Resume.pdf`
 
     return (
         <div className="content__page">
+            <div className="resume__layout">
+            <ResumeNav />
             <div className="content__page__inner">
                 <div className="resume__header">
                     <h1>Résumé</h1>
                     <a className="resume__btn" href={pdf} download>Download one-page PDF</a>
                 </div>
 
-                <h2>Work Experience</h2>
+                <h2 id="experience" className="resume__section">Work Experience</h2>
 
                 <div className="content__card">
                     <div className="content__card__head">
@@ -62,7 +128,7 @@ export default function Resume() {
                     </div>
                 </div>
 
-                <h2>Education</h2>
+                <h2 id="education" className="resume__section">Education</h2>
 
                 <div className="content__card">
                     <div className="content__card__head">
@@ -97,7 +163,7 @@ export default function Resume() {
                     <p className="content__meta">Bilbao, Spain</p>
                 </div>
 
-                <h2>Leadership &amp; Organizations</h2>
+                <h2 id="leadership" className="resume__section">Leadership &amp; Organizations</h2>
 
                 <div className="content__card">
                     <div className="content__card__head">
@@ -136,17 +202,18 @@ export default function Resume() {
                     </ul>
                 </div>
 
-                <h2>Skills</h2>
+                <h2 id="skills" className="resume__section">Skills</h2>
                 <div className="content__card">
                     <p><strong>Software:</strong> Python, PyTorch, Pandas, C, C#, C++, Docker, React, JavaScript, HTML, CSS, SQL, Ansible, Git, AWS, CI/CD, Spark, CMake, PLC, Protobufs, OpenThread</p>
                     <p><strong>Mechanical &amp; CAD:</strong> SolidWorks, PTC Creo, PTC Simulate, solidThinking Inspire, FEA, topology optimization, CNC machining, welding, MATLAB, Arduino</p>
                     <p><strong>Languages:</strong> English (Native), Spanish (B2)</p>
                 </div>
 
-                <h2>Interests</h2>
+                <h2 id="interests" className="resume__section">Interests</h2>
                 <div className="content__card">
                     <p>Photography, Climbing, Sim Racing, Hiking, Snowboarding, Board Games, Running, Traveling</p>
                 </div>
+            </div>
             </div>
         </div>
     )

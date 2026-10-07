@@ -159,3 +159,72 @@
         gap: 0.15rem;
     }
 }
+
+/* Résumé page: sticky section sidebar with scroll-spy highlight */
+.resume__layout {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2.5rem;
+    width: 95%;
+    max-width: 1160px;
+}
+
+.resume__layout .content__page__inner {
+    width: auto;
+    flex: 1 1 0;
+    min-width: 0;
+}
+
+.resume__nav {
+    flex: 0 0 200px;
+    position: sticky;
+    top: 80px;
+    padding-top: 7.5rem;
+}
+
+.resume__nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border-left: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.resume__nav__link {
+    display: block;
+    padding: 0.45rem 0 0.45rem 1rem;
+    margin-left: -1px;
+    border-left: 2px solid transparent;
+    color: #8a8a8a;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.resume__nav__link:hover {
+    color: #d0d0d0;
+}
+
+.resume__nav__link.active {
+    color: #fff;
+    border-left-color: #fff;
+}
+
+/* Keep section headings clear of the sticky navbar when jumped to. */
+.resume__section {
+    scroll-margin-top: 100px;
+}
+
+@media screen and (max-width: 960px) {
+    .resume__nav {
+        display: none;
+    }
+
+    .resume__layout {
+        width: 100%;
+    }
+
+    .resume__layout .content__page__inner {
+        width: 95%;
+    }
+}
