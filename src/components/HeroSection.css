@@ -83,6 +83,12 @@
       font-size: 30px;
     }
   
+    /* Flex column so the stacked buttons' margins don't collapse. */
+    .hero-btns {
+      display: flex;
+      flex-direction: column;
+    }
+
     .btn-mobile {
       display: block;
       text-decoration: none;

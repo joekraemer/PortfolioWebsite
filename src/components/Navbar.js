@@ -32,10 +32,17 @@ function Navbar() {
           <Link to="/" className="navbar-logo">
             Joe Kraemer
           </Link>
-          <div className='menu-icon' onClick={handleClick}>
-            <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
-          </div>
-          <ul className={click ? 'nav-menu active' : 'nav-menu'}>
+          <button
+            type='button'
+            className='menu-icon'
+            onClick={handleClick}
+            aria-label='Toggle menu'
+            aria-expanded={click}
+            aria-controls='nav-menu'
+          >
+            <i className={click ? 'fas fa-times' : 'fas fa-bars'} aria-hidden='true' />
+          </button>
+          <ul id='nav-menu' className={click ? 'nav-menu active' : 'nav-menu'}>
             <li className='nav-item'>
               <Link to='/' className='nav-links' onClick={closeMobileMenu}>
                 Home

@@ -24,6 +24,13 @@ button {
     font-weight: 700;
 }
 
+/* Keyboard focus ring. The blue holds at least 3:1 contrast against both the
+   dark pages/navbar (#1a1717) and the white card sections. */
+:focus-visible {
+    outline: 3px solid #1a73e8;
+    outline-offset: 2px;
+}
+
 h1 {
     color: #5890B0;
 }

@@ -12,11 +12,11 @@ function HeroSection() {
         <p>Software Engineer at Blue Origin &mdash; mechanical engineer turned
           software engineer, building flight-software test systems for the Lunar Lander.</p>
         <div className="hero-btns">
-            <Link to='/projects' className='btn-mobile'>
-              <button className='btn btn--outline btn--large'>View Projects</button>
+            <Link to='/projects' className='btn btn-mobile btn--outline btn--large'>
+              View Projects
             </Link>
-            <Link to='/contact' className='btn-mobile'>
-              <button className='btn btn--primary btn--large'>Get in Touch</button>
+            <Link to='/contact' className='btn btn-mobile btn--primary btn--large'>
+              Get in Touch
             </Link>
         </div>
     </div>
