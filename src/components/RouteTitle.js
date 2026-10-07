@@ -20,7 +20,9 @@ const TITLES = {
 }
 
 export function titleFor(pathname) {
-    const path = pathname.replace(/\/+$/, '') || '/'
+    // React Router matches paths case-insensitively, so /Resume renders the
+    // Résumé page; look the title up the same way.
+    const path = pathname.toLowerCase().replace(/\/+$/, '') || '/'
     if (!(path in TITLES)) return `Page not found · ${SITE}`
     const page = TITLES[path]
     return page ? `${page} · ${SITE}` : SITE

@@ -4,11 +4,15 @@
   }
   
   /* Section heading shares the grid's centered max-width box so the two align. */
-  .cards > h1 {
+  /* h2 for heading order (page h1 -> section h2 -> card h3), styled to match
+     the site's h1 look. */
+  .cards > h2 {
     max-width: 1120px;
     width: 90%;
     margin: 0 auto;
     text-align: center;
+    font-size: 2em;
+    color: #5890B0;
   }
   
   .cards__container {
