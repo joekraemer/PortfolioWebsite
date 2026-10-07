@@ -5,13 +5,31 @@
     font-family: 'PT Sans', sans-serif;
 }
 
+body {
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 700;
+    line-height: 1.25;
+}
+
+button {
+    font-weight: 700;
+}
+
 h1 {
     color: #5890B0;
 }
 
 p {
-    text-indent: 50px;
-    margin-top: 4px
+    margin-top: 4px;
 }
 
 .photo__container {

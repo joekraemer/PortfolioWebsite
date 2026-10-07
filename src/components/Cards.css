@@ -3,7 +3,11 @@
     background: #fff;
   }
   
-  h1 {
+  /* Section heading shares the grid's centered max-width box so the two align. */
+  .cards > h1 {
+    max-width: 1120px;
+    width: 90%;
+    margin: 0 auto;
     text-align: center;
   }
   
