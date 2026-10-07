@@ -105,7 +105,7 @@ export default function Resume() {
                         <h3>Amazon &mdash; Software Development Engineer</h3>
                         <span className="content__meta">May 2025 &ndash; Present</span>
                     </div>
-                    <p className="content__meta">Project Kuiper / Amazon Leo, Ground Segment Software</p>
+                    <p className="content__meta">Amazon Leo, Ground Segment Software</p>
                     <ul>
                         <li>Built hardware-in-the-loop test infrastructure from the ground up (Rust, Docker, CI), including the organization&rsquo;s first automated on-hardware test gating at code-review time, and improved existing pipeline reliability (2x faster test setup, failure diagnostics capture).</li>
                         <li>Led a cross-team, green-field integration between a network control plane and an embedded encryption engine, owning the architecture, wire-protocol schema (Cap&rsquo;n Proto), and client implementation through to the first end-to-end validation on hardware.</li>
