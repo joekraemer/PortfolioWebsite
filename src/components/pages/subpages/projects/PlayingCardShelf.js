@@ -1,4 +1,3 @@
-import React from 'react'
 import './ProjectSubpages.css'
 import PhotoGallery from '../../../PhotoGallery'
 
@@ -35,9 +34,9 @@ export default function PlayingCardShelf() {
 
                     <p>My youngest brother is really into magic and cardistry and so naturally he has a bunch of playing cards. So for Christmas (yes I know it took me a while to post) me and my other brother wanted to make something to display his favorite cards.</p>
 
-                    <p>We got 6 ft of a 1" x 5" and 1" x 2" oak boards. We went with oak because we liked the continuous grains. We then chopped those into thirds to make 2 ft sections.</p>
+                    <p>We got 6 ft of a 1&quot; x 5&quot; and 1&quot; x 2&quot; oak boards. We went with oak because we liked the continuous grains. We then chopped those into thirds to make 2 ft sections.</p>
 
-                    <p>In order for the cards to sit securely on the shelf we used a router cut out a small 1/2" groove, about 1/8" deep. This gives the decks something to rest on. Sorry for the blurry picture.</p>
+                    <p>In order for the cards to sit securely on the shelf we used a router cut out a small 1/2&quot; groove, about 1/8&quot; deep. This gives the decks something to rest on. Sorry for the blurry picture.</p>
 
                     <p>Next we applied two coats of a rather dark stain to bring out the details of the wood. Also the darker finish matches the room much better.</p>
 
@@ -45,11 +44,11 @@ export default function PlayingCardShelf() {
 
                     <p>Then we mounted the small board to the larger piece with screws. Make sure to pre-drill when using hard wood because they splinter very easily. Also countersink for a clean finished product.</p>
 
-                    <p>To make sure the stain wouldn't rub off on the cards, we applied a couple coats of clear sealer.</p>
+                    <p>To make sure the stain wouldn&apos;t rub off on the cards, we applied a couple coats of clear sealer.</p>
 
-                    <p>Next was mounting the shelf on the wall! We used picture hanging brackets and nails to mount the shelf. The shelf isn't very heavy and isn't at risk of pulling out of the drywall so we didn't think drywall anchors were necessary.</p>
+                    <p>Next was mounting the shelf on the wall! We used picture hanging brackets and nails to mount the shelf. The shelf isn&apos;t very heavy and isn&apos;t at risk of pulling out of the drywall so we didn&apos;t think drywall anchors were necessary.</p>
 
-                    <p>Here is all three shelves mounted. Don't worry, they are evenly spaced, it just looks off because of the shadows.</p>
+                    <p>Here is all three shelves mounted. Don&apos;t worry, they are evenly spaced, it just looks off because of the shadows.</p>
 
                     <PhotoGallery photos={mount_photos} />
 

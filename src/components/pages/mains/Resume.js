@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from 'react'
-import '../../../App.css'
+import { useEffect, useState } from 'react'
 import './ContentPage.css'
 
 const SECTIONS = [
@@ -103,7 +102,7 @@ export default function Resume() {
 
                 <div className="content__card">
                     <div className="content__card__head">
-                        <h2>Amazon &mdash; Software Development Engineer</h2>
+                        <h3>Amazon &mdash; Software Development Engineer</h3>
                         <span className="content__meta">May 2025 &ndash; Present</span>
                     </div>
                     <p className="content__meta">Project Kuiper / Amazon Leo, Ground Segment Software</p>
@@ -117,7 +116,7 @@ export default function Resume() {
 
                 <div className="content__card">
                     <div className="content__card__head">
-                        <h2>Blue Origin &mdash; Software Engineer II</h2>
+                        <h3>Blue Origin &mdash; Software Engineer II</h3>
                         <span className="content__meta">Apr 2024 &ndash; May 2025</span>
                     </div>
                     <ul>
@@ -131,12 +130,12 @@ export default function Resume() {
 
                 <div className="content__card">
                     <div className="content__card__head">
-                        <h2>DMC Inc</h2>
+                        <h3>DMC Inc</h3>
                         <span className="content__meta">Sept 2018 &ndash; Feb 2022</span>
                     </div>
                     <div className="content__role">
                         <div className="content__card__head">
-                            <h3>Systems Engineer II</h3>
+                            <h4>Systems Engineer II</h4>
                             <span className="content__meta">Jun 2020 &ndash; Feb 2022</span>
                         </div>
                         <ul>
@@ -153,7 +152,7 @@ export default function Resume() {
                     </div>
                     <div className="content__role">
                         <div className="content__card__head">
-                            <h3>Systems Engineer I</h3>
+                            <h4>Systems Engineer I</h4>
                             <span className="content__meta">Sept 2018 &ndash; Jun 2020</span>
                         </div>
                         <ul>
@@ -166,7 +165,7 @@ export default function Resume() {
 
                 <div className="content__card">
                     <div className="content__card__head">
-                        <h2>Georgia Institute of Technology</h2>
+                        <h3>Georgia Institute of Technology</h3>
                         <span className="content__meta">Sept 2021 &ndash; Aug 2023</span>
                     </div>
                     <p className="content__subtitle">M.S. in Computer Science &mdash; Specialization: Machine Learning</p>
@@ -181,7 +180,7 @@ export default function Resume() {
 
                 <div className="content__card">
                     <div className="content__card__head">
-                        <h2>University of Illinois at Urbana-Champaign</h2>
+                        <h3>University of Illinois at Urbana-Champaign</h3>
                         <span className="content__meta">Aug 2013 &ndash; May 2018</span>
                     </div>
                     <p className="content__subtitle">B.S. in Mechanical Engineering &mdash; Minor: Spanish Language</p>
@@ -190,7 +189,7 @@ export default function Resume() {
 
                 <div className="content__card">
                     <div className="content__card__head">
-                        <h2>Universidad de Deusto</h2>
+                        <h3>Universidad de Deusto</h3>
                         <span className="content__meta">Aug 2015 &ndash; Dec 2015</span>
                     </div>
                     <p className="content__subtitle">Intensive Spanish Language and Culture Immersion Program</p>
@@ -201,7 +200,7 @@ export default function Resume() {
 
                 <div className="content__card">
                     <div className="content__card__head">
-                        <h2>SAE Mini Baja &mdash; Drivetrain Subsystem Lead</h2>
+                        <h3>SAE Mini Baja &mdash; Drivetrain Subsystem Lead</h3>
                         <span className="content__meta">Jan 2017 &ndash; May 2018</span>
                     </div>
                     <ul>
@@ -214,7 +213,7 @@ export default function Resume() {
 
                 <div className="content__card">
                     <div className="content__card__head">
-                        <h2>SAE Mini Baja &mdash; Chassis Subsystem Lead</h2>
+                        <h3>SAE Mini Baja &mdash; Chassis Subsystem Lead</h3>
                         <span className="content__meta">May 2016 &ndash; Jan 2017</span>
                     </div>
                     <ul>
@@ -226,7 +225,7 @@ export default function Resume() {
 
                 <div className="content__card">
                     <div className="content__card__head">
-                        <h2>Engineers Without Borders &mdash; Guatemala Water Project Lead</h2>
+                        <h3>Engineers Without Borders &mdash; Guatemala Water Project Lead</h3>
                         <span className="content__meta">Sept 2015 &ndash; 2018</span>
                     </div>
                     <ul>
@@ -240,7 +239,7 @@ export default function Resume() {
                 <div className="content__card">
                     {SKILL_GROUPS.map(group => (
                         <div className="skills__group" key={group.name}>
-                            <h4 className="skills__heading">{group.name}</h4>
+                            <h3 className="skills__heading">{group.name}</h3>
                             <ul className="skills__chips">
                                 {group.items.map(item => (
                                     <li className="skills__chip" key={item}>{item}</li>

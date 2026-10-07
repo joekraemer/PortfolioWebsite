@@ -1,5 +1,3 @@
-import React from 'react'
-import '../../../App.css'
 import './ContentPage.css'
 
 export default function Contact() {

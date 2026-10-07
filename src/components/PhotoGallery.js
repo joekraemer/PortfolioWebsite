@@ -1,4 +1,3 @@
-import React from 'react'
 import './PhotoGallery.css'
 import asset from '../asset'
 

@@ -1,4 +1,3 @@
-import React from 'react'
 import './ProjectSubpages.css'
 import PhotoGallery from '../../../PhotoGallery'
 
@@ -27,7 +26,7 @@ export default function CryptocurrencyTracker() {
 
                     <p>When my dad found out how much money I had spent investing in a volatile market, he was very skeptical and wanted to see if it would end up being profitable overall.</p>
 
-                    <p>Initially I created an excel workbook and I was logging the current prices and my ether production manually. This was a tedious task that I really wished I didn't have to do.  I started thinking to myself and I realized that this would be a perfect opportunity to use my newly acquired Python knowledge.</p>
+                    <p>Initially I created an excel workbook and I was logging the current prices and my ether production manually. This was a tedious task that I really wished I didn&apos;t have to do.  I started thinking to myself and I realized that this would be a perfect opportunity to use my newly acquired Python knowledge.</p>
 
                     <p>I learned Python for a statistics and probability course that I took, and I really wanted to do something more with it.  I spent a lot of time learning about JSON and REST APIs.  I was fascinated that there were so many websites that allowed you to interact with them on such a simple level.  I quickly found websites that had APIs that I could access to track prices as well as the production of my mining rig.</p>
 

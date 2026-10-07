@@ -3,9 +3,12 @@
 }
 
 .btn {
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    line-height: normal;
     padding: 8px 20px;
     border-radius: 2px;
-    outline: none;
     border: none;
     cursor: pointer;
     font-weight: 700;

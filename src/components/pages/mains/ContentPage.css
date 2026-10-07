@@ -35,7 +35,7 @@
     gap: 0.5rem;
 }
 
-.content__card h2 {
+.content__card__head > h3 {
     font-size: 1.5rem;
     margin: 0;
 }
@@ -49,7 +49,7 @@
     padding-top: 1.25rem;
 }
 
-.content__role h3 {
+.content__role h4 {
     font-size: 1.15rem;
     font-weight: 700;
     margin: 0;

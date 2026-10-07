@@ -1,4 +1,3 @@
-import React from 'react'
 import './ProjectSubpages.css'
 import PhotoGallery from '../../../PhotoGallery'
 
@@ -29,7 +28,7 @@ export default function EWB() {
 
                     <p>Another problem we faced was that the ground near the cliff was highly saturated with water and provides little support.  The best plan would be to pour a concrete foundation, but we wouldn’t know if this would be possible until we actually try it.  So we devised a backup plan, just in case using a concrete foundation wouldn’t work.</p>
 
-                    <p>Since we couldn't support the piping from the bottom, we decided to support it from the top.  We will attach cables to different sections of the piping and then anchor these cables with a large ground anchor, similar to the ones used for telephone poles.</p>
+                    <p>Since we couldn&apos;t support the piping from the bottom, we decided to support it from the top.  We will attach cables to different sections of the piping and then anchor these cables with a large ground anchor, similar to the ones used for telephone poles.</p>
                 </div>
 
             </div>

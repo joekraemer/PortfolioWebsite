@@ -1,4 +1,3 @@
-import React from 'react'
 import './ProjectSubpages.css'
 
 export default function ULockBikeMount() {
@@ -17,7 +16,7 @@ export default function ULockBikeMount() {
                     <p>Originally, I was going to use some sort of clasp, perhaps with some sort of snap-fit.  However, later in the day, I was inspired by the latch on our fence gate. This design would allow for quick one handed removal while keeping the lock secure (unless I were to flip over, but I think my lock falling off would be the least of my worries).</p>
 
 
-                    <p> I had to run through a couple iterations,  because I wasn't able to predict the shrinkage of the plastic in certain places, particularly the screw holes. </p>
+                    <p> I had to run through a couple iterations,  because I wasn&apos;t able to predict the shrinkage of the plastic in certain places, particularly the screw holes. </p>
 
                 </div>
             </div>
