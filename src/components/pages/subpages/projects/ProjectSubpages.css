@@ -9,6 +9,11 @@
     margin: 0 auto;
 }
 
-h1 {
+.project__subpages__parent h1 {
     text-align: left;
+}
+
+/* Paragraph spacing replaces the old site-wide 50px first-line indent. */
+.project__subpages__parent p {
+    margin-bottom: 1em;
 }
