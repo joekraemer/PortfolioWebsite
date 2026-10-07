@@ -67,13 +67,12 @@ function ResumeNav() {
 }
 
 const SKILL_GROUPS = [
-    { name: 'Languages', items: ['Rust', 'Python', 'C', 'C++', 'C#', 'JavaScript', 'SQL'] },
+    { name: 'Programming', items: ['Rust', 'Python', 'C', 'C++', 'C#', 'JavaScript', 'SQL'] },
     { name: 'Embedded & Protocols', items: ["Cap'n Proto", 'Protobufs', 'STM32', 'OpenThread', 'PLC', 'Arduino'] },
     { name: 'Infrastructure & CI', items: ['Docker', 'CI/CD', 'Ansible', 'CMake', 'Git', 'AWS'] },
     { name: 'Data & ML', items: ['PyTorch', 'Pandas', 'Spark'] },
-    { name: 'Web', items: ['React', 'HTML', 'CSS'] },
     { name: 'Mechanical & CAD', items: ['SolidWorks', 'PTC Creo', 'PTC Simulate', 'solidThinking Inspire', 'FEA', 'Topology optimization', 'CNC machining', 'Welding', 'MATLAB'] },
-    { name: 'Spoken', items: ['English (Native)', 'Spanish (B2)'] },
+    { name: 'Languages', items: ['English (Native)', 'Spanish (B2)'] },
 ];
 
 const INTERESTS = [
