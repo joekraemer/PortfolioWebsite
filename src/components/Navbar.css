@@ -88,14 +88,18 @@
         top: 80px;
         left: -100%;
         opacity: 1;
-        transition: all 0.5s ease;
+        /* Hidden (and out of the Tab order) while closed (#63). Visibility
+           flips only after the 0.5s slide-out, so the animation is unchanged. */
+        visibility: hidden;
+        transition: all 0.5s ease, visibility 0s linear 0.5s;
     }
 
     .nav-menu.active {
         background: #242222;
         left: 0;
         opacity: 1;
-        transition: all 0.5s ease;
+        visibility: visible;
+        transition: all 0.5s ease, visibility 0s linear 0s;
         z-index: 1;
     }
 

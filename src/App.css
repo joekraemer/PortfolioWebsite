@@ -50,3 +50,25 @@ p {
     height: 100%;
     object-fit: cover;
 }
+
+/* Skip link (#64): off-screen until it receives keyboard focus. */
+.skip-link {
+    position: absolute;
+    left: 8px;
+    top: -100px;
+    z-index: 1000;
+    padding: 8px 16px;
+    background: #fff;
+    color: #1a1717;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.skip-link:focus {
+    top: 8px;
+}
+
+/* <main> is focused programmatically by the skip link; no ring on the whole page. */
+main:focus {
+    outline: none;
+}

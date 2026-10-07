@@ -13,7 +13,7 @@ export default function EWB() {
         <div className="project__subpages__parent">
             <div className='project__subpages_container'>
                 <h1>Engineers Without Borders</h1>
-                <h3> Engineers Without Borders is an organization dedicated to the sustainable development of areas in need. </h3>
+                <p className="project__subtitle">Engineers Without Borders is an organization dedicated to the sustainable development of areas in need.</p>
 
                 <div className='project__subpages__content'>
                     <PhotoGallery photos={ewb_photos} />

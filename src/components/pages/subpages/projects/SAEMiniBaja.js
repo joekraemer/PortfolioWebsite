@@ -27,7 +27,7 @@ export default function SAEMiniBaja() {
         <div className="project__subpages__parent">
             <div className='project__subpages_container'>
                 <h1>SAE Mini-Baja</h1>
-                <h3> We design, build and compete a brand new off road racing vehicle every year </h3>
+                <p className="project__subtitle">We design, build and compete a brand new off road racing vehicle every year</p>
 
                 <div className='project__subpages__content'>
                     <PhotoGallery photos={car_photos} />

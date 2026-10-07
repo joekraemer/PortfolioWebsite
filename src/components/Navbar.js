@@ -1,14 +1,24 @@
 import { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import { Button } from '../components/Button.js';
 import './Navbar.css'
 
 function Navbar() {
   const [click, setClick] = useState(false);
   const [button, setButton] = useState(() => window.innerWidth > 960);
+  const location = useLocation();
 
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
+
+  // Close the mobile menu on every navigation, including the logo link and
+  // the browser Back/Forward buttons (#62). Adjusting state during render
+  // avoids a setState-in-effect re-render.
+  const [lastPath, setLastPath] = useState(location.pathname);
+  if (location.pathname !== lastPath) {
+    setLastPath(location.pathname);
+    setClick(false);
+  }
 
   useEffect(() => {
     const showButton = () => setButton(window.innerWidth > 960)
@@ -19,7 +29,7 @@ function Navbar() {
   return (
     <nav className='navbar'>
       <div className='navbar-container'>
-        <Link to="/" className="navbar-logo">
+        <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
           Joe Kraemer
         </Link>
         <button

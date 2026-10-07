@@ -5,7 +5,7 @@ export default function OneSecondVideos() {
         <div className="project__subpages__parent">
             <div className='project__subpages_container'>
                 <h1>One Second Videos</h1>
-                <h3> After filming my life for 365 days, I created a video scrapbook of my Freshman year of college using shot one second videos. </h3>
+                <p className="project__subtitle">After filming my life for 365 days, I created a video scrapbook of my Freshman year of college using shot one second videos.</p>
 
                 <div className='project__subpages__content'>
                     <p>The first few days of college are a whirlwind of activities with meeting people and exploring new places and trying new things.  On my third day of college, I was talking with my new (and now good friend) Jack.  He showed me this YouTube video he had created just a year ago.  He was inspired by a man named Cesar Kuriyama who came up with the original idea. It was a series of 1 second videos all mashed up together.  Each video was taken on everyday of the previous year.  Each shot was a glimpse into his Senior year of high school.  His video was around 8 minutes long, but it took well over an hour to get through it.  We would pause the video and talk about a particular moment or for him to elaborate on a story. This was a great time for us to swap stories and have a great conversation. I loved how I felt like I just experienced the year as Jack, through ups and downs, from vacations to school, from summer to winter. I loved the idea and I started filming the very next day.</p>
