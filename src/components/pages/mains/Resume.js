@@ -84,7 +84,7 @@ export default function Resume() {
                 <div className="content__card">
                     <div className="content__card__head">
                         <h2>Amazon &mdash; Software Development Engineer</h2>
-                        <span className="content__meta">2025 &ndash; Present</span>
+                        <span className="content__meta">May 2025 &ndash; Present</span>
                     </div>
                     <p className="content__meta">Project Kuiper / Amazon Leo, Ground Segment Software</p>
                     <ul>
@@ -98,7 +98,7 @@ export default function Resume() {
                 <div className="content__card">
                     <div className="content__card__head">
                         <h2>Blue Origin &mdash; Software Engineer II</h2>
-                        <span className="content__meta">Apr 2024 &ndash; Present</span>
+                        <span className="content__meta">Apr 2024 &ndash; May 2025</span>
                     </div>
                     <ul>
                         <li>Contributed to development and maintenance of the Lunar Lander HIL (Hardware-in-the-Loop) using agile methodologies, enabling early system-level testing that integrates flight-like hardware with actual flight software for comprehensive verification before flight release.</li>
