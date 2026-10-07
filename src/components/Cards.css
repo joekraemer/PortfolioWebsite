@@ -4,8 +4,9 @@
   }
   
   /* Section heading shares the grid's centered max-width box so the two align. */
-  /* h2 for heading order (page h1 -> section h2 -> card h3), styled to match
-     the site's h1 look. */
+  /* Section heading: h2 on Home (below the hero h1), h1 on Projects (the
+     page's only heading). Both get the same look. */
+  .cards > h1,
   .cards > h2 {
     max-width: 1120px;
     width: 90%;
