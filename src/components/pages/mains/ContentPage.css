@@ -114,6 +114,7 @@
     align-items: center;
     flex-wrap: wrap;
     gap: 1rem;
+    margin-bottom: 1.5rem;
 }
 
 .resume__header h1 {
