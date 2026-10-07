@@ -1,4 +1,3 @@
-import React from 'react'
 import './ProjectSubpages.css'
 import PhotoGallery from '../../../PhotoGallery'
 
@@ -47,7 +46,7 @@ export default function SAEMiniBaja() {
 
                     <PhotoGallery photos={design_photos} />
 
-                    <p>Perhaps my most difficult challenge was mounting the shocks.  Our captain chose a vastly different mounting style where the shocks are mounted much closer to the wheel.  This means that the shock will travel from a 45 degree angle at rest to horizontal in full compression.  This is a much wider range than a traditional style, thus the mounts must be more reinforced.  The real bump in the road was that the shock point was not near any of the chassis members.  I couldn't change the design to accommodate the shocks without breaking one of the rules.  I mulled over this problem for most of the summer and ended up deciding that I would design an arching truss that would mount to the side impact member.  This would create more space in the foot box for the pedals and also cancel out some of the symmetric lateral forces when the shocks compress.</p>
+                    <p>Perhaps my most difficult challenge was mounting the shocks.  Our captain chose a vastly different mounting style where the shocks are mounted much closer to the wheel.  This means that the shock will travel from a 45 degree angle at rest to horizontal in full compression.  This is a much wider range than a traditional style, thus the mounts must be more reinforced.  The real bump in the road was that the shock point was not near any of the chassis members.  I couldn&apos;t change the design to accommodate the shocks without breaking one of the rules.  I mulled over this problem for most of the summer and ended up deciding that I would design an arching truss that would mount to the side impact member.  This would create more space in the foot box for the pedals and also cancel out some of the symmetric lateral forces when the shocks compress.</p>
 
                     <p>After some quick calculations, it was obvious that aluminum would be the best material of choice because of the large weight savings.  Since aluminum can’t be welded to a steel frame we would attach it with a series of tabs.  An added bonus is that we can test different designs and swap them out easily.  I went back and forth between Creo and Simulate optimizing the design. My original design was very lean and under built.  After running FEA, I quickly realized that it needed to be beefed up. We decided to aim for a factor of safety of 4 because we wanted the first design to be solid and reliable before we tried to optimize.</p>
 

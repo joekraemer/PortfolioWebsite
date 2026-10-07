@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from 'react'
-import '../../../App.css'
+import { useEffect, useState } from 'react'
 import './ContentPage.css'
 
 const SECTIONS = [

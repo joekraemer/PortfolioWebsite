@@ -31,11 +31,6 @@
     align-items: center;
 }
 
-.fa-typo3 {
-    margin-left: 0.5rem;
-    font-size: 1.8rem;
-}
-
 .nav-menu {
     display: grid;
     grid-template-columns: repeat(4, auto);
@@ -84,10 +79,6 @@
 }
 
 @media screen and (max-width: 960px) {
-    .NavbarItems {
-        position: relative;
-    }
-
     .nav-menu {
         display: flex;
         flex-direction: column;
