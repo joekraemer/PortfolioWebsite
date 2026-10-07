@@ -5,23 +5,23 @@ import PhotoGallery from '../../../PhotoGallery'
 export default function PlayingCardShelf() {
 
     const title_photos = [
-        { src: '../images/subpages/cardshelf/card_shelf_complete.jpg', alt: 'Completed card shelf with cards' },
-        { src: '../images/subpages/cardshelf/card_shelf_complete_alternate_angle.jpg', alt: 'Completed card shelf, alternate angle' },
+        { src: 'images/subpages/cardshelf/card_shelf_complete.jpg', alt: 'Completed card shelf with cards' },
+        { src: 'images/subpages/cardshelf/card_shelf_complete_alternate_angle.jpg', alt: 'Completed card shelf, alternate angle' },
     ];
 
     const build_photos = [
-        { src: '../images/subpages/cardshelf/card_shelf_pieces.jpg', alt: 'Cut oak board pieces' },
-        { src: '../images/subpages/cardshelf/card_shelf_router.jpg', alt: 'Routing the card groove' },
-        { src: '../images/subpages/cardshelf/card_shelf_groove.jpg', alt: 'Routed groove detail' },
-        { src: '../images/subpages/cardshelf/card_shelf_stain.jpg', alt: 'Staining the wood' },
-        { src: '../images/subpages/cardshelf/card_shelf_clear_coat.jpg', alt: 'Applying clear coat' },
+        { src: 'images/subpages/cardshelf/card_shelf_pieces.jpg', alt: 'Cut oak board pieces' },
+        { src: 'images/subpages/cardshelf/card_shelf_router.jpg', alt: 'Routing the card groove' },
+        { src: 'images/subpages/cardshelf/card_shelf_groove.jpg', alt: 'Routed groove detail' },
+        { src: 'images/subpages/cardshelf/card_shelf_stain.jpg', alt: 'Staining the wood' },
+        { src: 'images/subpages/cardshelf/card_shelf_clear_coat.jpg', alt: 'Applying clear coat' },
     ];
 
     const mount_photos = [
-        { src: '../images/subpages/cardshelf/card_shelf_pads.jpg', alt: 'Mounting pads' },
-        { src: '../images/subpages/cardshelf/card_shelf_mounting.jpg', alt: 'Mounting hardware' },
-        { src: '../images/subpages/cardshelf/card_shelf_wall_mounting.jpg', alt: 'Mounting the shelf to the wall' },
-        { src: '../images/subpages/cardshelf/card_shelf_complete_no_cards.jpg', alt: 'All three shelves mounted' },
+        { src: 'images/subpages/cardshelf/card_shelf_pads.jpg', alt: 'Mounting pads' },
+        { src: 'images/subpages/cardshelf/card_shelf_mounting.jpg', alt: 'Mounting hardware' },
+        { src: 'images/subpages/cardshelf/card_shelf_wall_mounting.jpg', alt: 'Mounting the shelf to the wall' },
+        { src: 'images/subpages/cardshelf/card_shelf_complete_no_cards.jpg', alt: 'All three shelves mounted' },
     ];
 
     return (
@@ -47,9 +47,9 @@ export default function PlayingCardShelf() {
 
                     <p>To make sure the stain wouldn't rub off on the cards, we applied a couple coats of clear sealer.</p>
 
-                    <p>Next was mounting the shelf on the wall! We used picture hanging brackets and nails to mount the shelf The shelf isn't very heavy and isn't at risk of pulling out of the drywall so we didn't think drywall anchors were necessary.</p>
+                    <p>Next was mounting the shelf on the wall! We used picture hanging brackets and nails to mount the shelf. The shelf isn't very heavy and isn't at risk of pulling out of the drywall so we didn't think drywall anchors were necessary.</p>
 
-                    <p>Here is all three shelves mounted. Don't worry, they're are evenly spaced, it just looks off because of the shadows.</p>
+                    <p>Here is all three shelves mounted. Don't worry, they are evenly spaced, it just looks off because of the shadows.</p>
 
                     <PhotoGallery photos={mount_photos} />
 

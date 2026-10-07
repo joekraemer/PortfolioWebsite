@@ -5,23 +5,23 @@ import PhotoGallery from '../../../PhotoGallery'
 export default function SAEMiniBaja() {
 
     const design_photos = [
-        { src: '../images/subpages/baja/baja_jr_truss_cad.jpg', alt: 'Truss CAD design' },
-        { src: '../images/subpages/baja/baja_jr_truss_cad_final.jpg', alt: 'Final truss CAD design' },
-        { src: '../images/subpages/baja/baja_jr_truss_fea_initial.jpg', alt: 'Initial truss FEA analysis' },
-        { src: '../images/subpages/baja/baja_jr_truss_fea_final.jpg', alt: 'Final truss FEA analysis' },
+        { src: 'images/subpages/baja/baja_jr_truss_cad.jpg', alt: 'Truss CAD design' },
+        { src: 'images/subpages/baja/baja_jr_truss_cad_final.jpg', alt: 'Final truss CAD design' },
+        { src: 'images/subpages/baja/baja_jr_truss_fea_initial.jpg', alt: 'Initial truss FEA analysis' },
+        { src: 'images/subpages/baja/baja_jr_truss_fea_final.jpg', alt: 'Final truss FEA analysis' },
     ];
 
     const frame_photos = [
-        { src: '../images/subpages/baja/baja_jr_frame.jpg', alt: 'Baja chassis frame' },
-        { src: '../images/subpages/baja/baja_jr_frame_side.jpg', alt: 'Chassis frame side view' },
-        { src: '../images/subpages/baja/baja_jr_frame_fae.jpg', alt: 'Chassis frame FEA' },
-        { src: '../images/subpages/baja/baja_jr_frame_engine.jpg', alt: 'Chassis frame with engine' },
-        { src: '../images/subpages/baja/baja_jr_frame_painted.jpg', alt: 'Painted chassis frame' },
+        { src: 'images/subpages/baja/baja_jr_frame.jpg', alt: 'Baja chassis frame' },
+        { src: 'images/subpages/baja/baja_jr_frame_side.jpg', alt: 'Chassis frame side view' },
+        { src: 'images/subpages/baja/baja_jr_frame_fae.jpg', alt: 'Chassis frame FEA' },
+        { src: 'images/subpages/baja/baja_jr_frame_engine.jpg', alt: 'Chassis frame with engine' },
+        { src: 'images/subpages/baja/baja_jr_frame_painted.jpg', alt: 'Painted chassis frame' },
     ];
 
     const car_photos = [
-        { src: '../images/subpages/baja/baja_jr_whole_car_parking.jpg', alt: 'Completed Baja car' },
-        { src: '../images/subpages/baja/baja_jr_whole_car_dirt.jpg', alt: 'Baja car on the dirt course' },
+        { src: 'images/subpages/baja/baja_jr_whole_car_parking.jpg', alt: 'Completed Baja car' },
+        { src: 'images/subpages/baja/baja_jr_whole_car_dirt.jpg', alt: 'Baja car on the dirt course' },
     ];
 
     return (
@@ -33,11 +33,11 @@ export default function SAEMiniBaja() {
                 <div className='project__subpages__content'>
                     <PhotoGallery photos={car_photos} />
 
-                    <p>SAE Mini-Baja is my favorite club.  It provides me with awesome opportunities to apply concepts that I learn from classes to the real world.  I love that I get hands on experience with designing and manufacturing.  During the beginning of my membership, I spent most of my time working in the shop.  I was trained on all the tools and was put to work manufacturing and assembling parts, as well as doing repairs and maintenance.  I loved this time because I learned so much.  Most of the time I was working along side an upperclassmen who would guide me and answer all the questions I had.  It was great to obtain some of the vast knowledge they have.  I learned all the different parts of the car and their function. They taught me tips and tricks for building and assembling.  They showed me the ins and outs of the SAE Mini-Baja rules and the different design decisions teams make.
+                    <p>SAE Mini-Baja is my favorite club.  It provides me with awesome opportunities to apply concepts that I learn from classes to the real world.  I love that I get hands on experience with designing and manufacturing.  During the beginning of my membership, I spent most of my time working in the shop.  I was trained on all the tools and was put to work manufacturing and assembling parts, as well as doing repairs and maintenance.  I loved this time because I learned so much.  Most of the time I was working alongside an upperclassmen who would guide me and answer all the questions I had.  It was great to obtain some of the vast knowledge they have.  I learned all the different parts of the car and their function. They taught me tips and tricks for building and assembling.  They showed me the ins and outs of the SAE Mini-Baja rules and the different design decisions teams make.</p>
 
-                        Recently I have been involved much more in the design work.  In spring I was given the position of Chassis Sub-Team Lead.  This meant that I was in charge of designing the chassis as well as guiding the rest of the sub-team.  In order to accelerate our timeline, our team decided to push our design freeze from November to September.  This change would allow us to have two extra months for testing and validation before our competitions in the Spring.  So I spent my summer designing the new chassis.
+                    <p>Recently I have been involved much more in the design work.  In spring I was given the position of Chassis Sub-Team Lead.  This meant that I was in charge of designing the chassis as well as guiding the rest of the sub-team.  In order to accelerate our timeline, our team decided to push our design freeze from November to September.  This change would allow us to have two extra months for testing and validation before our competitions in the Spring.  So I spent my summer designing the new chassis.</p>
 
-                        Our previous chassis design used thicker tubes than the rules required as well as unnecessary tubes and supports.  Additionally, some of the chassis members did not include sufficient tolerance for manufacture error and actually caused us to fail the technical inspection.  My primary goal was to design a 100% rule compliant car.  Secondary objectives were to reduce weight and aerodynamic drag.  Once I was given the suspension points from our captain, I started my work.</p>
+                    <p>Our previous chassis design used thicker tubes than the rules required as well as unnecessary tubes and supports.  Additionally, some of the chassis members did not include sufficient tolerance for manufacture error and actually caused us to fail the technical inspection.  My primary goal was to design a 100% rule compliant car.  Secondary objectives were to reduce weight and aerodynamic drag.  Once I was given the suspension points from our captain, I started my work.</p>
 
                     <p>I designed the chassis around the points and made sure that members would be able to support all of the suspension.  After I created a rough design, I started to iterate. I made a model of our largest and smallest driver to ensure they both fit. There are many rules that ensure the driver is safe and so I had to make quite a few changes so that both extremes would pass tech inspection.</p>
 
@@ -55,7 +55,7 @@ export default function SAEMiniBaja() {
 
                     <PhotoGallery photos={frame_photos} />
 
-                    <p>After many hours of measuring, profiling and welding, the chassis was finally complete.  The chassis was completed over a month earlier that last year.  The paint for this year is a stealthy matte black.</p>
+                    <p>After many hours of measuring, profiling and welding, the chassis was finally complete.  The chassis was completed over a month earlier than last year.  The paint for this year is a stealthy matte black.</p>
 
                 </div>
 

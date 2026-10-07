@@ -1,14 +1,12 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import asset from '../asset'
 
 function CardItem(props) {
     // Resolve image paths against the Vite base URL so cards render correctly
     // on any route (a bare relative path like "images/..." breaks on nested
     // routes such as /projects because it resolves relative to the URL).
-    const base = import.meta.env.BASE_URL
-    const src = props.src.startsWith('http') || props.src.startsWith('/')
-        ? props.src
-        : `${base}${props.src}`
+    const src = asset(props.src)
 
     return (
         <>
