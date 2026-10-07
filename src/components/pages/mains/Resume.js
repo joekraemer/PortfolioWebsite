@@ -82,7 +82,7 @@ export default function Resume() {
                 <div className="content__card">
                     <div className="content__card__head">
                         <h2>University of Illinois at Urbana-Champaign</h2>
-                        <span className="content__meta">May 2018</span>
+                        <span className="content__meta">Aug 2013 &ndash; May 2018</span>
                     </div>
                     <p className="content__subtitle">B.S. in Mechanical Engineering &mdash; Minor: Spanish Language</p>
                     <p className="content__meta">Urbana-Champaign, IL &middot; GPA 3.61</p>
