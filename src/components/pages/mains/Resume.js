@@ -23,9 +23,9 @@ export default function Resume() {
                     <ul>
                         <li>Contributed to development and maintenance of the Lunar Lander HIL (Hardware-in-the-Loop) using agile methodologies, enabling early system-level testing that integrates flight-like hardware with actual flight software for comprehensive verification before flight release.</li>
                         <li>Developed software to emulate sensor behavior from physics simulations, letting flight software interact with real system components in real time.</li>
-                        <li>Automated and standardized configuration deployment across multiple servers with Ansible, keeping the VTB environment consistent and stable across testing runs.</li>
+                        <li>Automated and standardized configuration deployment across multiple servers with Ansible, keeping the HIL environment consistent and stable across testing runs.</li>
                         <li>Collaborated with cross-functional teams to integrate hardware and software from diverse sources, troubleshooting complex system-interaction and hardware-specific issues.</li>
-                        <li>Integrated the VTB into customer CI/CD pipelines for continuous testing and validation of flight software, enabling early issue identification.</li>
+                        <li>Integrated the HIL into customer CI/CD pipelines for continuous testing and validation of flight software, enabling early issue identification.</li>
                     </ul>
                 </div>
 
