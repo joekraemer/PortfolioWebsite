@@ -66,6 +66,27 @@ function ResumeNav() {
     )
 }
 
+const SKILL_GROUPS = [
+    { name: 'Languages', items: ['Rust', 'Python', 'C', 'C++', 'C#', 'JavaScript', 'SQL'] },
+    { name: 'Embedded & Protocols', items: ["Cap'n Proto", 'Protobufs', 'STM32', 'OpenThread', 'PLC', 'Arduino'] },
+    { name: 'Infrastructure & CI', items: ['Docker', 'CI/CD', 'Ansible', 'CMake', 'Git', 'AWS'] },
+    { name: 'Data & ML', items: ['PyTorch', 'Pandas', 'Spark'] },
+    { name: 'Web', items: ['React', 'HTML', 'CSS'] },
+    { name: 'Mechanical & CAD', items: ['SolidWorks', 'PTC Creo', 'PTC Simulate', 'solidThinking Inspire', 'FEA', 'Topology optimization', 'CNC machining', 'Welding', 'MATLAB'] },
+    { name: 'Spoken', items: ['English (Native)', 'Spanish (B2)'] },
+];
+
+const INTERESTS = [
+    { name: 'Photography', icon: 'fas fa-camera' },
+    { name: 'Climbing', icon: 'fas fa-mountain' },
+    { name: 'Sim Racing', icon: 'fas fa-flag-checkered' },
+    { name: 'Hiking', icon: 'fas fa-hiking' },
+    { name: 'Snowboarding', icon: 'fas fa-snowboarding' },
+    { name: 'Board Games', icon: 'fas fa-dice' },
+    { name: 'Running', icon: 'fas fa-running' },
+    { name: 'Traveling', icon: 'fas fa-plane' },
+];
+
 export default function Resume() {
     const pdf = `${import.meta.env.BASE_URL}JoeKraemer_Resume.pdf`
 
@@ -218,15 +239,27 @@ export default function Resume() {
 
                 <h2 id="skills" className="resume__section">Skills</h2>
                 <div className="content__card">
-                    <p><strong>Software:</strong> Python, PyTorch, Pandas, C, C#, C++, Docker, React, JavaScript, HTML, CSS, SQL, Ansible, Git, AWS, CI/CD, Spark, CMake, PLC, Protobufs, OpenThread</p>
-                    <p><strong>Mechanical &amp; CAD:</strong> SolidWorks, PTC Creo, PTC Simulate, solidThinking Inspire, FEA, topology optimization, CNC machining, welding, MATLAB, Arduino</p>
-                    <p><strong>Languages:</strong> English (Native), Spanish (B2)</p>
+                    {SKILL_GROUPS.map(group => (
+                        <div className="skills__group" key={group.name}>
+                            <h4 className="skills__heading">{group.name}</h4>
+                            <ul className="skills__chips">
+                                {group.items.map(item => (
+                                    <li className="skills__chip" key={item}>{item}</li>
+                                ))}
+                            </ul>
+                        </div>
+                    ))}
                 </div>
 
                 <h2 id="interests" className="resume__section">Interests</h2>
-                <div className="content__card">
-                    <p>Photography, Climbing, Sim Racing, Hiking, Snowboarding, Board Games, Running, Traveling</p>
-                </div>
+                <ul className="interests__tiles">
+                    {INTERESTS.map(interest => (
+                        <li className="interests__tile" key={interest.name}>
+                            <i className={interest.icon} aria-hidden="true"></i>
+                            <span>{interest.name}</span>
+                        </li>
+                    ))}
+                </ul>
             </div>
             </div>
         </div>
