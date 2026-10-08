@@ -11,13 +11,16 @@
 //   { type: 'photo', src, alt }      one full-width image
 //   { type: 'youtube', id, title }   YouTubeEmbed
 // Image paths are relative to public/.
+//
+// card.thumb is the base path of the card's WebP thumbnails, made by
+// scripts/card-thumbs.sh as `${thumb}-${width}.webp` for each thumbWidths entry.
 
 export const projects = [
     {
         slug: 'printer3d',
         title: '3D Printer',
         subtitle: 'I combined a variety of designs and models as well as my own ideas and modifications to create my very own 3D Printer.',
-        card: { title: 'Custom 3D Printer', label: 'Hardware', image: 'images/subpages/3dprinter/3dprinter_complete.jpg', homeTitle: 'Custom RepRap 3D Printer built from sourced parts' },
+        card: { title: 'Custom 3D Printer', label: 'Hardware', thumb: 'images/cards/printer3d', thumbWidths: [400, 800], homeTitle: 'Custom RepRap 3D Printer built from sourced parts' },
         body: [
             { type: 'gallery', photos: [
                 { src: 'images/subpages/3dprinter/3dprinter_extruder.jpg', alt: '3D Printer Extruder' },
@@ -44,7 +47,7 @@ export const projects = [
         slug: 'cryptocurrencytracker',
         title: 'Cryptocurrency Tracker',
         subtitle: 'I wrote a python script to track cryptocurrency prices as well as the profitability of my personal mining rig.',
-        card: { title: 'Cryptocurrency Tracker', label: 'Software', image: 'images/subpages/crypto/cryptocurrency_mining_rig.jpg', homeTitle: 'Cryptocurrency price tracker' },
+        card: { title: 'Cryptocurrency Tracker', label: 'Software', thumb: 'images/cards/cryptocurrencytracker', thumbWidths: [400, 476], homeTitle: 'Cryptocurrency price tracker' },
         body: [
             { type: 'p', text: 'During the Spring of 2017, I became fascinated with cryptocurrencies and blockchain technologies. I was amazed at the novelty of the decentralized authority and the public ledger. The more I learned about the technology, the more I wanted to get involved.' },
             { type: 'p', text: 'Towards the end of May, I decided that I was going to build a GPU mining rig to mine ether on the Ethereum network. It seemed like a relatively safe investment because I could always resell or reuse the hardware once mining became unprofitable.' },
@@ -67,7 +70,7 @@ export const projects = [
         slug: 'ewb',
         title: 'Engineers Without Borders',
         subtitle: 'Engineers Without Borders is an organization dedicated to the sustainable development of areas in need.',
-        card: { title: 'Engineers Without Borders', label: 'Engineering', image: 'images/subpages/ewb/ewb_testing.jpg', homeTitle: 'Engineers Without Borders field work' },
+        card: { title: 'Engineers Without Borders', label: 'Engineering', thumb: 'images/cards/ewb', thumbWidths: [400, 413], homeTitle: 'Engineers Without Borders field work' },
         body: [
             { type: 'gallery', photos: [
                 { src: 'images/subpages/ewb/ewb_testing.jpg', alt: 'Water testing in the field' },
@@ -86,7 +89,7 @@ export const projects = [
         slug: 'onesecondvideos',
         title: 'One Second Videos',
         subtitle: 'After filming my life for 365 days, I created a video scrapbook of my Freshman year of college using shot one second videos.',
-        card: { title: 'One Second Videos', label: 'Software', image: 'images/img-3.jpg' },
+        card: { title: 'One Second Videos', label: 'Software', thumb: 'images/cards/placeholder', thumbWidths: [400, 800] },
         body: [
             { type: 'p', text: 'The first few days of college are a whirlwind of activities with meeting people and exploring new places and trying new things. On my third day of college, I was talking with my new (and now good friend) Jack. He showed me this YouTube video he had created just a year ago. He was inspired by a man named Cesar Kuriyama who came up with the original idea. It was a series of 1 second videos all mashed up together. Each video was taken on everyday of the previous year. Each shot was a glimpse into his Senior year of high school. His video was around 8 minutes long, but it took well over an hour to get through it. We would pause the video and talk about a particular moment or for him to elaborate on a story. This was a great time for us to swap stories and have a great conversation. I loved how I felt like I just experienced the year as Jack, through ups and downs, from vacations to school, from summer to winter. I loved the idea and I started filming the very next day.' },
             { type: 'p', text: 'I knew that I was going to be showing this video to people and so at first I tried to only film cool things that were happening around me. I would get slightly upset if I didn\'t film something interesting. I wanted to have stories and interesting topics so I could have conversations like I did with Jack. I filmed interesting clubs I tried out, sporting events I went to, cool chemistry experiments. After a month or so, I began to realize that my content wasn\'t a reflection of my life. Instead it was a superficial highlight reel. I wanted this to be a reflection of me, not just the cool and interesting, but the whole story. It was okay to take videos of the "mundane" because its what was really happening. From then on, I tried to be more frank with my content and not only post the interesting parts of my day, but also the boring parts, such as studying or driving home.' },
@@ -104,7 +107,7 @@ export const projects = [
         slug: 'playingcardshelf',
         title: 'Playing Card Shelf',
         subtitle: 'I created a custom floating shelf for displaying boutique playing cards.',
-        card: { title: 'Playing Card Shelf', label: 'Maker', image: 'images/subpages/cardshelf/card_shelf_complete.jpg', homeTitle: 'Laser-cut playing card display shelf' },
+        card: { title: 'Playing Card Shelf', label: 'Maker', thumb: 'images/cards/playingcardshelf', thumbWidths: [400, 691], homeTitle: 'Laser-cut playing card display shelf' },
         body: [
             { type: 'gallery', photos: [
                 { src: 'images/subpages/cardshelf/card_shelf_complete.jpg', alt: 'Completed card shelf with cards' },
@@ -138,7 +141,7 @@ export const projects = [
         slug: 'saeminibaja',
         title: 'SAE Mini-Baja',
         subtitle: 'We design, build and compete a brand new off road racing vehicle every year',
-        card: { title: 'SAE Mini Baja', label: 'Mechanical', image: 'images/subpages/baja/baja_jr_whole_car_parking.jpg', homeTitle: 'SAE Mini Baja off-road vehicle' },
+        card: { title: 'SAE Mini Baja', label: 'Mechanical', thumb: 'images/cards/saeminibaja', thumbWidths: [400, 585], homeTitle: 'SAE Mini Baja off-road vehicle' },
         body: [
             { type: 'gallery', photos: [
                 { src: 'images/subpages/baja/baja_jr_whole_car_parking.jpg', alt: 'Completed Baja car' },
@@ -173,7 +176,7 @@ export const projects = [
         slug: 'ulockbikemount',
         title: 'U-Lock Bike Mount',
         subtitle: 'I designed and manufactured my very own custom lock mount.',
-        card: { title: 'Custom U-Lock Bike Mount', label: 'Mechanical', image: 'images/img-3.jpg' },
+        card: { title: 'Custom U-Lock Bike Mount', label: 'Mechanical', thumb: 'images/cards/placeholder', thumbWidths: [400, 800] },
         body: [
             { type: 'p', text: 'Once I bought a new bike, I decided to protect my investment with something a little more heavy duty than my old $5 cable lock from Wal-Mart. So I purchased a hardened steel U-Lock. I quickly found out that the U-Lock has no good place to go, unlike my old lock which I could wrap around the handle bars. So the best spot is around the top tube and where it moves freely and somehow smashes against my knees with every pedal. So I decided to fix it.' },
             { type: 'p', text: 'I did some quick research on google and found that there is relatively few products out there. Most use a series of velcro straps or some sort of pouch. I wanted something stable and strong, yet quick and easy to remove.' },

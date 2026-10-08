@@ -306,3 +306,21 @@
     font-size: 1.7rem;
     margin-bottom: 0.55rem;
 }
+
+/* A tile that links out (#80): the link fills the tile, so it looks like the
+   others until hovered or focused. */
+.interests__tile--link {
+    padding: 0;
+    transition: border-color 0.15s, background-color 0.15s;
+}
+.interests__tile--link > a {
+    display: block;
+    padding: 1.1rem 0.8rem;
+    border-radius: inherit;
+    color: inherit;
+    text-decoration: none;
+}
+.interests__tile--link:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.35);
+}

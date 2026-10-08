@@ -75,7 +75,7 @@ const SKILL_GROUPS = [
 ];
 
 const INTERESTS = [
-    { name: 'Photography', icon: 'fas fa-camera' },
+    { name: 'Photography', icon: 'fas fa-camera', href: 'https://joekraemer.github.io/photo-website/' },
     { name: 'Climbing', icon: 'fas fa-mountain' },
     { name: 'Sim Racing', icon: 'fas fa-flag-checkered' },
     { name: 'Hiking', icon: 'fas fa-hiking' },
@@ -95,7 +95,7 @@ export default function Resume() {
             <div className="content__page__inner">
                 <div className="resume__header">
                     <h1>Résumé</h1>
-                    <a className="resume__btn" href={pdf} download>Download one-page PDF</a>
+                    <a className="resume__btn" href={pdf} download>Download résumé (PDF)</a>
                 </div>
 
                 <h2 id="experience" className="resume__section">Work Experience</h2>
@@ -252,9 +252,18 @@ export default function Resume() {
                 <h2 id="interests" className="resume__section">Interests</h2>
                 <ul className="interests__tiles">
                     {INTERESTS.map(interest => (
-                        <li className="interests__tile" key={interest.name}>
-                            <i className={interest.icon} aria-hidden="true"></i>
-                            <span>{interest.name}</span>
+                        <li className={interest.href ? 'interests__tile interests__tile--link' : 'interests__tile'} key={interest.name}>
+                            {interest.href ? (
+                                <a href={interest.href} target="_blank" rel="noopener noreferrer">
+                                    <i className={interest.icon} aria-hidden="true"></i>
+                                    <span>{interest.name}</span>
+                                </a>
+                            ) : (
+                                <>
+                                    <i className={interest.icon} aria-hidden="true"></i>
+                                    <span>{interest.name}</span>
+                                </>
+                            )}
                         </li>
                     ))}
                 </ul>

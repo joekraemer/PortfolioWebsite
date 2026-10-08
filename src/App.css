@@ -50,6 +50,15 @@ button {
     outline-offset: 2px;
 }
 
+/* Visitors who ask for reduced motion get no transitions or animations (#85). */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        transition: none !important;
+        animation: none !important;
+        scroll-behavior: auto !important;
+    }
+}
+
 h1 {
     color: #5890B0;
 }
