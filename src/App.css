@@ -1,3 +1,22 @@
+/* Shared layout and type tokens (#83, #84). Every page uses the same content
+   box and side gutter as the navbar, so all pages share one left edge. */
+:root {
+    --gutter: clamp(20px, 5vw, 64px);
+    --content-max: 1120px;
+    --measure: 720px;
+
+    --fs-h1: clamp(2rem, 1.6rem + 1.6vw, 2.5rem);
+    --lh-h1: 1.2;
+    --fs-h2: 1.75rem;
+    --lh-h2: 2.25rem;
+    --fs-h3: 1.25rem;
+    --lh-h3: 1.75rem;
+    --fs-body: 1.0625rem;
+    --lh-body: 1.75rem;
+    --fs-meta: 0.875rem;
+    --lh-meta: 1.375rem;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
