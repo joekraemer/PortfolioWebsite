@@ -1,4 +1,3 @@
-import React from 'react'
 import Navbar from './components/Navbar';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import './App.css';
@@ -6,13 +5,7 @@ import Home from './components/pages/mains/Home'
 import Contact from './components/pages/mains/Contact'
 import Resume from './components/pages/mains/Resume'
 import Projects from './components/pages/mains/Projects'
-import Printer3D from './components/pages/subpages/projects/Printer3D';
-import CryptocurrencyTracker from './components/pages/subpages/projects/CryptocurrencyTracker';
-import EWB from './components/pages/subpages/projects/EWB';
-import OneSecondVideos from './components/pages/subpages/projects/OneSecondVideos';
-import PlayingCardShelf from './components/pages/subpages/projects/PlayingCardShelf';
-import SAEMiniBaja from './components/pages/subpages/projects/SAEMiniBaja';
-import ULockBikeMount from './components/pages/subpages/projects/ULockBikeMount';
+import ProjectPage from './components/ProjectPage';
 import NotFound from './components/pages/mains/NotFound';
 import ScrollToTop from './components/ScrollToTop';
 import RouteTitle from './components/RouteTitle';
@@ -23,6 +16,8 @@ function skipToContent(event) {
   document.getElementById("main-content")?.focus();
 }
 
+// Every path here must also be in src/routes.js, which the build uses to
+// write one HTML file per page. Project pages come from src/data/projects.js.
 function App() {
   return (
     <Router basename={import.meta.env.BASE_URL}>
@@ -36,13 +31,7 @@ function App() {
           <Route path='/contact' element={<Contact />} />
           <Route path='/resume' element={<Resume />} />
           <Route path='/projects' element={<Projects />} />
-          <Route path='/projects/printer3d' element={< Printer3D />} />
-          <Route path='/projects/cryptocurrencytracker' element={< CryptocurrencyTracker />} />
-          <Route path='/projects/ewb' element={< EWB />} />
-          <Route path='/projects/onesecondvideos' element={< OneSecondVideos />} />
-          <Route path='/projects/playingcardshelf' element={< PlayingCardShelf />} />
-          <Route path='/projects/saeminibaja' element={< SAEMiniBaja />} />
-          <Route path='/projects/ulockbikemount' element={< ULockBikeMount />} />
+          <Route path='/projects/:slug' element={<ProjectPage />} />
           <Route path='*' element={<NotFound />} />
         </Routes>
       </main>

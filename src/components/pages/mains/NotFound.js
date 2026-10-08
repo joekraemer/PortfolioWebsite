@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import '../subpages/projects/ProjectSubpages.css'
+import '../../ProjectPage.css'
 
 export default function NotFound() {
     return (

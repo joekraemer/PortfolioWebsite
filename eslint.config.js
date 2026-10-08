@@ -30,10 +30,4 @@ export default [
       'react/prop-types': 'off',
     },
   },
-  {
-    // App.js keeps its legacy default React import for now (owned by a
-    // concurrent change); the automatic JSX runtime doesn't need it.
-    files: ['src/App.js'],
-    rules: { 'no-unused-vars': ['error', { varsIgnorePattern: '^React$' }] },
-  },
 ]
