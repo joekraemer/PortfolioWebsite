@@ -13,6 +13,23 @@
     text-align: left;
 }
 
+/* Phones (#54): a fixed-height image used to force the content wider than
+   the screen. Let the column shrink and scale the image to its width. */
+@media only screen and (max-width: 600px) {
+    .project__subpages_container {
+        min-width: 0;
+    }
+
+    .project__subpages__parent .photo__container {
+        height: auto;
+    }
+
+    .project__subpages__parent .photo__img {
+        width: 100%;
+        height: auto;
+    }
+}
+
 /* Paragraph spacing replaces the old site-wide 50px first-line indent. */
 .project__subpages__parent p {
     margin-bottom: 1em;
