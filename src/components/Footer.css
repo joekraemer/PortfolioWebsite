@@ -1,0 +1,46 @@
+.footer {
+  --gutter: clamp(20px, 5vw, 64px);
+  background: #1c1b1b;
+  border-top: 1px solid #3a3636;
+  color: #a9a4a0;
+}
+
+.footer__inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px 28px;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 28px var(--gutter);
+}
+
+.footer__copy {
+  font-size: 0.95rem;
+}
+
+.footer__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 20px;
+  list-style: none;
+  font-size: 0.95rem;
+}
+
+/* #a9a4a0 and #f2f0ee both hold over 6.9:1 on #1c1b1b. */
+.footer__links a {
+  color: #f2f0ee;
+  text-decoration: none;
+}
+
+.footer__links a:hover {
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 600px) {
+  .footer__inner {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+  }
+}
