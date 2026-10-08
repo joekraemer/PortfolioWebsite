@@ -7,16 +7,38 @@
     color: #fff;
 }
 
+.content__page {
+    font-size: var(--fs-body);
+    line-height: var(--lh-body);
+}
+
+/* Same content box and gutter as the navbar (#83). */
 .content__page__inner {
-    width: 95%;
-    max-width: 900px;
-    padding: 3rem 1.5rem;
+    width: 100%;
+    max-width: var(--content-max);
+    padding: 3rem var(--gutter) 4rem;
+}
+
+.content__page__inner > * {
+    max-width: 800px;
 }
 
 .content__page h1 {
     text-align: left;
-    font-size: 2.75rem;
+    font-size: var(--fs-h1);
+    line-height: var(--lh-h1);
     margin-bottom: 1.5rem;
+}
+
+/* Section headings (#84): clearly larger than the job titles below them. */
+.content__page h2 {
+    font-size: var(--fs-h2);
+    line-height: var(--lh-h2);
+    margin: 48px 0 16px;
+}
+
+.content__page .resume__header + h2 {
+    margin-top: 16px;
 }
 
 .content__card {
@@ -36,7 +58,8 @@
 }
 
 .content__card__head > h3 {
-    font-size: 1.5rem;
+    font-size: var(--fs-h3);
+    line-height: var(--lh-h3);
     margin: 0;
 }
 
@@ -50,26 +73,26 @@
 }
 
 .content__role h4 {
-    font-size: 1.15rem;
+    font-size: var(--fs-body);
     font-weight: 700;
     margin: 0;
 }
 
 .content__subtitle {
-    font-size: 1.1rem;
+    font-size: var(--fs-body);
     font-weight: 700;
     margin: 0.5rem 0 0.25rem;
 }
 
 .content__meta {
     color: #bdbdbd;
-    font-size: 0.95rem;
+    font-size: var(--fs-meta);
+    line-height: var(--lh-meta);
 }
 
 .content__card ul {
     margin: 1rem 0 0;
     padding-left: 1.25rem;
-    line-height: 1.6;
 }
 
 .content__card li {
@@ -136,7 +159,7 @@
 .contact__label {
     flex: 0 0 90px;
     color: #bdbdbd;
-    font-size: 0.95rem;
+    font-size: var(--fs-meta);
 }
 
 .contact__links a {
@@ -151,11 +174,7 @@
 }
 
 @media screen and (max-width: 600px) {
-    .content__page h1 {
-        font-size: 2rem;
-    }
-
-    .contact__links li {
+        .contact__links li {
         flex-direction: column;
         gap: 0.15rem;
     }
@@ -164,24 +183,25 @@
 /* Résumé page: sticky section sidebar with scroll-spy highlight */
 .resume__layout {
     display: flex;
-    justify-content: center;
     align-items: flex-start;
     gap: 2.5rem;
-    width: 95%;
-    max-width: 1160px;
+    width: 100%;
+    max-width: var(--content-max);
+    padding: 3rem var(--gutter) 4rem;
 }
 
 .resume__layout .content__page__inner {
-    width: auto;
     flex: 1 1 0;
     min-width: 0;
+    max-width: 800px;
+    padding: 0;
 }
 
 .resume__nav {
     flex: 0 0 200px;
     position: sticky;
     top: 80px;
-    padding-top: 7.5rem;
+    padding-top: 5.5rem;
 }
 
 .resume__nav ul {
@@ -198,7 +218,7 @@
     border-left: 2px solid transparent;
     color: #8a8a8a;
     text-decoration: none;
-    font-size: 0.95rem;
+    font-size: var(--fs-meta);
     transition: color 0.2s ease, border-color 0.2s ease;
 }
 
@@ -221,12 +241,8 @@
         display: none;
     }
 
-    .resume__layout {
-        width: 100%;
-    }
-
     .resume__layout .content__page__inner {
-        width: 95%;
+        max-width: none;
     }
 }
 
