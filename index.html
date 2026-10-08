@@ -6,9 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#1c1b1b" />
     <meta name="description" content="Joe Kraemer: software engineer at Amazon Leo working on embedded and systems software, hardware-in-the-loop testing and satellite ground links." />
-    <!-- Link previews. No static og:url or rel="canonical" on purpose: every
-         route is served this same head (scripts/spa-routes.mjs), so a static
-         canonical would mark every page as a duplicate of the home page. -->
+    <!-- Link previews. These are the home page's values: at build time
+         scripts/spa-routes.mjs writes one copy of this file per route from
+         src/routes.js, replacing the title, description and og:/twitter:
+         title/description tags and adding og:url and rel="canonical". -->
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Joe Kraemer" />
     <meta property="og:title" content="Joe Kraemer" />
