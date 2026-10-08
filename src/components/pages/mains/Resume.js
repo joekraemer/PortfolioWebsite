@@ -1,5 +1,44 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useSyncExternalStore } from 'react'
 import './ContentPage.css'
+
+// Phones get collapsible job descriptions (#89). Matches the 600px phone
+// breakpoint used in ContentPage.css.
+const PHONE_QUERY = '(max-width: 600px)'
+
+function subscribePhone(onChange) {
+    const mq = window.matchMedia(PHONE_QUERY)
+    mq.addEventListener('change', onChange)
+    return () => mq.removeEventListener('change', onChange)
+}
+
+function useIsPhone() {
+    return useSyncExternalStore(subscribePhone, () => window.matchMedia(PHONE_QUERY).matches)
+}
+
+// On phones, wraps an entry's description in <details> so only the role,
+// company and dates show until "Show details" is tapped. Desktop always
+// shows the full description. `label` names the entry for screen readers,
+// since every summary reads "Show details".
+function Collapsible({ label, defaultOpen = false, children }) {
+    const isPhone = useIsPhone()
+    const [open, setOpen] = useState(defaultOpen)
+
+    if (!isPhone) return children
+
+    return (
+        <details
+            className="resume__details"
+            open={open}
+            onToggle={(e) => setOpen(e.currentTarget.open)}
+        >
+            <summary className="resume__details__summary">
+                {open ? 'Hide details' : 'Show details'}
+                <span className="visually-hidden">: {label}</span>
+            </summary>
+            {children}
+        </details>
+    )
+}
 
 const SECTIONS = [
     { id: 'experience', label: 'Work Experience' },
@@ -110,12 +149,14 @@ export default function Resume() {
                         <span className="content__meta">May 2025 &ndash; Present</span>
                     </div>
                     <p className="content__meta">Amazon Leo, Ground Segment Software</p>
-                    <ul>
-                        <li>Built hardware-in-the-loop test infrastructure from the ground up (Rust, Docker, CI), including the organization&rsquo;s first automated on-hardware test gating at code-review time, and improved existing pipeline reliability (2x faster test setup, failure diagnostics capture).</li>
-                        <li>Led a cross-team, green-field integration between a network control plane and an embedded encryption engine, owning the architecture, wire-protocol schema (Cap&rsquo;n Proto), and client implementation through to the first end-to-end validation on hardware.</li>
-                        <li>Designed and implemented a liveness-detection protocol for a hardware-accelerated encryption appliance on high-throughput satellite ground links, eliminating a class of silent multi-minute outages on peer failure.</li>
-                        <li>Authored technical designs adopted by the team, including a plugin-based power-on self-test framework for embedded hardware, and contributed shared developer tooling used across multiple engineering teams.</li>
-                    </ul>
+                    <Collapsible label="Amazon" defaultOpen>
+                        <ul>
+                            <li>Built hardware-in-the-loop test infrastructure from the ground up (Rust, Docker, CI), including the organization&rsquo;s first automated on-hardware test gating at code-review time, and improved existing pipeline reliability (2x faster test setup, failure diagnostics capture).</li>
+                            <li>Led a cross-team, green-field integration between a network control plane and an embedded encryption engine, owning the architecture, wire-protocol schema (Cap&rsquo;n Proto), and client implementation through to the first end-to-end validation on hardware.</li>
+                            <li>Designed and implemented a liveness-detection protocol for a hardware-accelerated encryption appliance on high-throughput satellite ground links, eliminating a class of silent multi-minute outages on peer failure.</li>
+                            <li>Authored technical designs adopted by the team, including a plugin-based power-on self-test framework for embedded hardware, and contributed shared developer tooling used across multiple engineering teams.</li>
+                        </ul>
+                    </Collapsible>
                 </div>
 
                 <div className="content__card">
@@ -123,13 +164,15 @@ export default function Resume() {
                         <h3>Blue Origin &mdash; Software Engineer II</h3>
                         <span className="content__meta">Apr 2024 &ndash; May 2025</span>
                     </div>
-                    <ul>
-                        <li>Contributed to development and maintenance of the Lunar Lander HIL (Hardware-in-the-Loop) using agile methodologies, enabling early system-level testing that integrates flight-like hardware with actual flight software for comprehensive verification before flight release.</li>
-                        <li>Developed software to emulate sensor behavior from physics simulations, letting flight software interact with real system components in real time.</li>
-                        <li>Automated and standardized configuration deployment across multiple servers with Ansible, keeping the HIL environment consistent and stable across testing runs.</li>
-                        <li>Collaborated with cross-functional teams to integrate hardware and software from diverse sources, troubleshooting complex system-interaction and hardware-specific issues.</li>
-                        <li>Integrated the HIL into customer CI/CD pipelines for continuous testing and validation of flight software, enabling early issue identification.</li>
-                    </ul>
+                    <Collapsible label="Blue Origin">
+                        <ul>
+                            <li>Contributed to development and maintenance of the Lunar Lander HIL (Hardware-in-the-Loop) using agile methodologies, enabling early system-level testing that integrates flight-like hardware with actual flight software for comprehensive verification before flight release.</li>
+                            <li>Developed software to emulate sensor behavior from physics simulations, letting flight software interact with real system components in real time.</li>
+                            <li>Automated and standardized configuration deployment across multiple servers with Ansible, keeping the HIL environment consistent and stable across testing runs.</li>
+                            <li>Collaborated with cross-functional teams to integrate hardware and software from diverse sources, troubleshooting complex system-interaction and hardware-specific issues.</li>
+                            <li>Integrated the HIL into customer CI/CD pipelines for continuous testing and validation of flight software, enabling early issue identification.</li>
+                        </ul>
+                    </Collapsible>
                 </div>
 
                 <div className="content__card">
@@ -142,26 +185,30 @@ export default function Resume() {
                             <h4>Systems Engineer II</h4>
                             <span className="content__meta">Jun 2020 &ndash; Feb 2022</span>
                         </div>
-                        <ul>
-                            <li>Managed and executed all phases of the project life-cycle: sales, customer relationship, requirements and specifications, architecture, hardware selection, programming, testing, onsite deployment, and post-project support.</li>
-                            <li>Enhanced radio communication and client request handling with parallelization (mbed thread API) and a priority queue for critical data packets, lowering latency and raising throughput.</li>
-                            <li>Led CI/CD pipeline development including static analysis, unit testing, and on-metal tests using mbed&rsquo;s Icetea framework to evaluate real-world radio performance and publish results to the commit as residuals.</li>
-                            <li>Developed firmware for a PIC32 PID motor controller: state machine, drivers, and modules for pressure sensors, EEPROM (I2C), UART, and a PWM-controlled H-bridge.</li>
-                            <li>Implemented a custom bootloader in C for an STM32 microcontroller, handling firmware validation and firmware updates.</li>
-                            <li>Created a C UART communications API library with C++ and C# bindings.</li>
-                            <li>Used CMake to orchestrate multiple build pipelines and define build targets.</li>
-                            <li>Built a Python Flask application on an embedded Linux platform that recorded microphone data over SPI and accelerometer data over UART, paired with a phone over Bluetooth to join Wi-Fi, and served the data to a mobile app through a web server.</li>
-                            <li>Created and maintained a C# .NET WPF application (MVVM) used to demonstrate and test new product features with the client.</li>
-                        </ul>
+                        <Collapsible label="DMC Systems Engineer II">
+                            <ul>
+                                <li>Managed and executed all phases of the project life-cycle: sales, customer relationship, requirements and specifications, architecture, hardware selection, programming, testing, onsite deployment, and post-project support.</li>
+                                <li>Enhanced radio communication and client request handling with parallelization (mbed thread API) and a priority queue for critical data packets, lowering latency and raising throughput.</li>
+                                <li>Led CI/CD pipeline development including static analysis, unit testing, and on-metal tests using mbed&rsquo;s Icetea framework to evaluate real-world radio performance and publish results to the commit as residuals.</li>
+                                <li>Developed firmware for a PIC32 PID motor controller: state machine, drivers, and modules for pressure sensors, EEPROM (I2C), UART, and a PWM-controlled H-bridge.</li>
+                                <li>Implemented a custom bootloader in C for an STM32 microcontroller, handling firmware validation and firmware updates.</li>
+                                <li>Created a C UART communications API library with C++ and C# bindings.</li>
+                                <li>Used CMake to orchestrate multiple build pipelines and define build targets.</li>
+                                <li>Built a Python Flask application on an embedded Linux platform that recorded microphone data over SPI and accelerometer data over UART, paired with a phone over Bluetooth to join Wi-Fi, and served the data to a mobile app through a web server.</li>
+                                <li>Created and maintained a C# .NET WPF application (MVVM) used to demonstrate and test new product features with the client.</li>
+                            </ul>
+                        </Collapsible>
                     </div>
                     <div className="content__role">
                         <div className="content__card__head">
                             <h4>Systems Engineer I</h4>
                             <span className="content__meta">Sept 2018 &ndash; Jun 2020</span>
                         </div>
-                        <ul>
-                            <li>Developed large-scale factory automation solutions across many industries using Siemens and Allen-Bradley PLCs and a variety of system platforms.</li>
-                        </ul>
+                        <Collapsible label="DMC Systems Engineer I">
+                            <ul>
+                                <li>Developed large-scale factory automation solutions across many industries using Siemens and Allen-Bradley PLCs and a variety of system platforms.</li>
+                            </ul>
+                        </Collapsible>
                     </div>
                 </div>
 
@@ -174,12 +221,14 @@ export default function Resume() {
                     </div>
                     <p className="content__subtitle">M.S. in Computer Science &mdash; Specialization: Machine Learning</p>
                     <p className="content__meta">Atlanta, GA &middot; GPA 3.90</p>
-                    <ul>
-                        <li><strong>Deep Learning</strong> &mdash; final project identified identical e-commerce product listings via text and image embeddings, clustered by similarity, trained on AWS SageMaker GPU instances.</li>
-                        <li><strong>Reinforcement Learning</strong> &mdash; Deep Q-Learning agent for Lunar Lander (Experience Replay, Target Networks); PPO and QMIX for multi-agent RL in Google Football; hundreds of parallel hyperparameter trials with Ray Tune.</li>
-                        <li><strong>Data &amp; Visual Analytics</strong> &mdash; big-data collection and visualization with R, D3, Spark, Hadoop, OpenRefine; PageRank and Random Forest; Spark/Scala on AWS EMR, Databricks, Azure, GCP. Final project: an R/Shiny app predicting NBA spreads and over/unders with linear regression (average error of about 1.5 and 10 points).</li>
-                    </ul>
-                    <p><strong>Additional coursework:</strong> Graduate Algorithms, Machine Learning, Machine Learning for Trading, AI for Robotics, Knowledge-Based AI</p>
+                    <Collapsible label="Georgia Tech">
+                        <ul>
+                            <li><strong>Deep Learning</strong> &mdash; final project identified identical e-commerce product listings via text and image embeddings, clustered by similarity, trained on AWS SageMaker GPU instances.</li>
+                            <li><strong>Reinforcement Learning</strong> &mdash; Deep Q-Learning agent for Lunar Lander (Experience Replay, Target Networks); PPO and QMIX for multi-agent RL in Google Football; hundreds of parallel hyperparameter trials with Ray Tune.</li>
+                            <li><strong>Data &amp; Visual Analytics</strong> &mdash; big-data collection and visualization with R, D3, Spark, Hadoop, OpenRefine; PageRank and Random Forest; Spark/Scala on AWS EMR, Databricks, Azure, GCP. Final project: an R/Shiny app predicting NBA spreads and over/unders with linear regression (average error of about 1.5 and 10 points).</li>
+                        </ul>
+                        <p><strong>Additional coursework:</strong> Graduate Algorithms, Machine Learning, Machine Learning for Trading, AI for Robotics, Knowledge-Based AI</p>
+                    </Collapsible>
                 </div>
 
                 <div className="content__card">
@@ -207,12 +256,14 @@ export default function Resume() {
                         <h3>SAE Mini Baja &mdash; Drivetrain Subsystem Lead</h3>
                         <span className="content__meta">Jan 2017 &ndash; May 2018</span>
                     </div>
-                    <ul>
-                        <li>Led a team of 10 members, each owning their own design project.</li>
-                        <li>Designed a 2-stage reduction gearbox for the next year&rsquo;s car.</li>
-                        <li>Created new team standards for 3D modeling and data-driven design.</li>
-                        <li>Welded suspension members and drivetrain shafts.</li>
-                    </ul>
+                    <Collapsible label="SAE Mini Baja drivetrain lead">
+                        <ul>
+                            <li>Led a team of 10 members, each owning their own design project.</li>
+                            <li>Designed a 2-stage reduction gearbox for the next year&rsquo;s car.</li>
+                            <li>Created new team standards for 3D modeling and data-driven design.</li>
+                            <li>Welded suspension members and drivetrain shafts.</li>
+                        </ul>
+                    </Collapsible>
                 </div>
 
                 <div className="content__card">
@@ -220,11 +271,13 @@ export default function Resume() {
                         <h3>SAE Mini Baja &mdash; Chassis Subsystem Lead</h3>
                         <span className="content__meta">May 2016 &ndash; Jan 2017</span>
                     </div>
-                    <ul>
-                        <li>Designed the next-generation frame with a projected 10% weight saving.</li>
-                        <li>Designed an aluminum front suspension mount using topology optimization, cutting its weight by 50%, and verified it with FEA using loads from strain-gauge testing.</li>
-                        <li>Mentored subteam members through their projects and repaired broken A-arms, CV shafts, and brake calipers.</li>
-                    </ul>
+                    <Collapsible label="SAE Mini Baja chassis lead">
+                        <ul>
+                            <li>Designed the next-generation frame with a projected 10% weight saving.</li>
+                            <li>Designed an aluminum front suspension mount using topology optimization, cutting its weight by 50%, and verified it with FEA using loads from strain-gauge testing.</li>
+                            <li>Mentored subteam members through their projects and repaired broken A-arms, CV shafts, and brake calipers.</li>
+                        </ul>
+                    </Collapsible>
                 </div>
 
                 <div className="content__card">
@@ -232,11 +285,13 @@ export default function Resume() {
                         <h3>Engineers Without Borders &mdash; Guatemala Water Project Lead</h3>
                         <span className="content__meta">Sept 2015 &ndash; 2018</span>
                     </div>
-                    <ul>
-                        <li>Led a team of 30 students designing a sustainable water supply system for a community of about 250 families.</li>
-                        <li>Designed a concrete spring box that captures underground water to be pumped to a storage tank.</li>
-                        <li>Traveled to Guatemala to land-survey and test the water for bacteria (3M Petrifilm) and metals (colorimeter).</li>
-                    </ul>
+                    <Collapsible label="Engineers Without Borders">
+                        <ul>
+                            <li>Led a team of 30 students designing a sustainable water supply system for a community of about 250 families.</li>
+                            <li>Designed a concrete spring box that captures underground water to be pumped to a storage tank.</li>
+                            <li>Traveled to Guatemala to land-survey and test the water for bacteria (3M Petrifilm) and metals (colorimeter).</li>
+                        </ul>
+                    </Collapsible>
                 </div>
 
                 <h2 id="skills" className="resume__section">Skills</h2>
