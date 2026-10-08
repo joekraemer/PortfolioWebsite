@@ -43,6 +43,22 @@
           );
         }
       }(window.location));
+
+      // Normalise alternate spellings of a page's URL to the one the app
+      // routes and the canonical link use (#70): /resume.html, /resume/,
+      // /Resume and /projects/index.html all become /resume or /projects.
+      (function (l, base) {
+        if (l.pathname.indexOf(base) !== 0) return;
+        var rest = l.pathname.slice(base.length);
+        var clean = rest
+          .replace(/(^|\/)index\.html$/, '')
+          .replace(/\.html$/, '')
+          .replace(/\/+$/, '')
+          .toLowerCase();
+        if (clean !== rest) {
+          window.history.replaceState(null, null, base + clean + l.search + l.hash);
+        }
+      }(window.location, '%BASE_URL%'));
     </script>
     <!-- End Single Page Apps for GitHub Pages -->
     <title>Joe Kraemer</title>

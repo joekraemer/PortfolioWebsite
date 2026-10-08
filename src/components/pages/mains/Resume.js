@@ -42,7 +42,11 @@ function ResumeNav() {
     const jump = (e, id) => {
         e.preventDefault()
         const el = document.getElementById(id)
-        if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+        if (!el) return
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+        // Put the section in the address bar so it can be copied and shared
+        // (#69). Keep React Router's history state so Back still works.
+        window.history.replaceState(window.history.state, '', `#${id}`)
     }
 
     return (
