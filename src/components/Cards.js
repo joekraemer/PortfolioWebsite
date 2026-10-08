@@ -6,7 +6,8 @@ import './Cards.css'
 //   headingLevel: level of the section title; card titles sit one level below
 //   rows:         number of cards in each row, in order
 //   items:        [{ slug, title, label, image }]
-function Cards({ heading, headingLevel, rows, items }) {
+//   tone:         'dark' for the Home page's dark section; default is white
+function Cards({ heading, headingLevel, rows, items, tone }) {
     const Heading = `h${headingLevel}`
     const rowItems = []
     let start = 0
@@ -17,7 +18,7 @@ function Cards({ heading, headingLevel, rows, items }) {
     if (start < items.length) rowItems.push(items.slice(start))
 
     return (
-        <div className='cards'>
+        <div className={tone === 'dark' ? 'cards cards--dark' : 'cards'}>
             <Heading>{heading}</Heading>
             <div className="cards__container">
                 <div className="cards__wrapper">
