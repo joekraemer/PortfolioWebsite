@@ -18,7 +18,7 @@ export default function Contact() {
                     <a className="resume__btn"
                        href={`${import.meta.env.BASE_URL}JoeKraemer_Resume.pdf`}
                        download>
-                        Download Résumé
+                        Download résumé (PDF)
                     </a>
                 </div>
 
@@ -47,6 +47,13 @@ export default function Contact() {
                             <a href="https://www.instagram.com/jak_creative_"
                                target="_blank" rel="noopener noreferrer">
                                 @jak_creative_
+                            </a>
+                        </li>
+                        <li>
+                            <span className="contact__label">Photography</span>
+                            <a href="https://joekraemer.github.io/photo-website/"
+                               target="_blank" rel="noopener noreferrer">
+                                joekraemer.github.io/photo-website
                             </a>
                         </li>
                     </ul>

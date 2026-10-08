@@ -5,7 +5,7 @@ import './Cards.css'
 //   heading:      section title
 //   headingLevel: level of the section title; card titles sit one level below
 //   rows:         number of cards in each row, in order
-//   items:        [{ slug, title, label, image }]
+//   items:        [{ slug, title, label, thumb, thumbWidths }]
 //   tone:         'dark' for the Home page's dark section; default is white
 function Cards({ heading, headingLevel, rows, items, tone }) {
     const Heading = `h${headingLevel}`
@@ -28,7 +28,9 @@ function Cards({ heading, headingLevel, rows, items, tone }) {
                                 <CardItem
                                     key={item.slug}
                                     headingLevel={headingLevel + 1}
-                                    src={item.image}
+                                    thumb={item.thumb}
+                                    thumbWidths={item.thumbWidths}
+                                    lazy={i > 0}
                                     text={item.title}
                                     label={item.label}
                                     path={`/projects/${item.slug}`}
