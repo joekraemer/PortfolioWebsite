@@ -9,10 +9,9 @@
 // <title>, description, og:/twitter: tags, og:url and canonical link, taken
 // from src/routes.js. The client sets the same title again via RouteTitle.
 //
-// File naming: Pages serves /foo from foo.html with no redirect, but a
-// directory foo/index.html makes /foo answer 301 -> /foo/. So each route gets
-// <route>.html. /projects is also the parent of /projects/<slug>, so it gets
-// both projects.html (for /projects) and projects/index.html (for /projects/).
+// File naming: Pages serves /foo from foo.html with no redirect. Each route
+// also gets foo/index.html so /foo/ answers 200; with both files present Pages
+// still serves /foo from foo.html (a lone foo/index.html would 301 /foo).
 import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -80,11 +79,10 @@ for (const route of routes) {
   }
   const rel = route.path.replace(/^\/+|\/+$/g, '');
   write(`${rel}.html`, html);
-  // A route that is also a parent of other routes needs a directory index too,
-  // because the directory exists and /<route>/ would otherwise 404.
-  if (routes.some((r) => r.path.startsWith(`${route.path}/`))) {
-    write(`${rel}/index.html`, html);
-  }
+  // Also write <route>/index.html so /<route>/ answers 200 instead of a 404
+  // that bounces through 404.html (#70). Pages still serves /<route> from
+  // <route>.html with no redirect when both exist (checked live on /projects).
+  write(`${rel}/index.html`, html);
 }
 
 const sitemap = [
