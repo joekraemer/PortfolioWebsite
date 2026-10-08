@@ -1,11 +1,3 @@
-.hero-container video {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    z-index: -1;
-}
-
 .hero-container {
     height: 100vh;
     width: 100%;
@@ -13,8 +5,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
-    object-fit: contain;
+    background-color: #1c1b1b;
   }
 
   .hero-container > h1 {
