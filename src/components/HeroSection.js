@@ -7,8 +7,8 @@ function HeroSection() {
         <video src={`${import.meta.env.BASE_URL}videos/video-2.mp4`} autoPlay loop muted/>
         <img className='hero-avatar' src={`${import.meta.env.BASE_URL}images/profile.jpg`} alt='Joe Kraemer' />
         <h1>Joe Kraemer</h1>
-        <p>Software Engineer at Blue Origin &mdash; mechanical engineer turned
-          software engineer, building flight-software test systems for the Lunar Lander.</p>
+        <p>Software Engineer at Amazon Leo &mdash; mechanical engineer turned
+          software engineer, building hardware-in-the-loop test systems for satellite ground links.</p>
         <div className="hero-btns">
             <Link to='/projects' className='btn btn-mobile btn--outline btn--large'>
               View Projects
