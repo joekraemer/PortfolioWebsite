@@ -99,6 +99,58 @@
     margin-bottom: 0.75rem;
 }
 
+/* Résumé on phones (#89): description bullets collapse behind "Show details". */
+.resume__details__summary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    min-height: 44px;
+    margin-top: 0.25rem;
+    color: #bdbdbd;
+    font-size: var(--fs-meta);
+    cursor: pointer;
+    list-style: none;
+}
+
+.resume__details__summary::-webkit-details-marker {
+    display: none;
+}
+
+.resume__details__summary::after {
+    content: '';
+    width: 0.45em;
+    height: 0.45em;
+    border-right: 2px solid currentColor;
+    border-bottom: 2px solid currentColor;
+    transform: translateY(-25%) rotate(45deg);
+}
+
+.resume__details[open] > .resume__details__summary::after {
+    transform: translateY(15%) rotate(-135deg);
+}
+
+.resume__details__summary:focus-visible {
+    outline: 2px solid #fff;
+    outline-offset: 2px;
+    border-radius: 2px;
+}
+
+.resume__details[open] > ul {
+    margin-top: 0.25rem;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
 .contact__links {
     list-style: none;
     margin: 0;
