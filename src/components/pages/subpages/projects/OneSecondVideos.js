@@ -1,4 +1,5 @@
 import './ProjectSubpages.css'
+import YouTubeEmbed from '../../../YouTubeEmbed'
 
 export default function OneSecondVideos() {
     return (
@@ -15,6 +16,15 @@ export default function OneSecondVideos() {
                     <p>At Christmas, the whole family gathered around the old projector and watched Super8 film from when my Dad and Aunts were kids.  It was so interesting to me to see daily life.  Not just the vacations to Niagara falls, but to see the big vintage station wagon, the flamboyant 70s decor, and my family being goofy.  I recognized that my video could be also a sort of time capsule, something that I will watch with my kids in 30 years and have to explain what a cell phone or how a human driven car worked.  </p>
 
                     <p>I know that you will not fully understand even 50% of the content if you are watching it without me.  All of the clips have stories behind them. Some of the clips have an obvious subject and message like the chants at a football game, or my dad spinning on a chair with a leaf blower.  Some are much less obvious.  Some hold meaning only to me. Nevertheless, the video is still entertaining and a great learning experience for me. Thanks for reading about my inspiration, motivation and thoughts on the project and I invite you to take a walk through my Freshman year at college.</p>
+
+                    <h2>2014-2015</h2>
+                    <YouTubeEmbed id="OCLLx4cTzEQ" title="One Second Videos, 2014-2015" />
+
+                    <h2>2020</h2>
+                    <YouTubeEmbed id="fRnjsvNsnPk" title="One Second Videos, 2020" />
+
+                    <h2>2021</h2>
+                    <YouTubeEmbed id="F4iHMyG26ug" title="One Second Videos, 2021" />
                 </div>
 
             </div>
