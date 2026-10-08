@@ -120,3 +120,54 @@
     }
   }
   
+/* Home (#35): the grid continues the hero's dark background and lines up with
+   the hero's text column. */
+.cards--dark {
+  --gutter: clamp(20px, 5vw, 64px);
+  background: #1c1b1b;
+  padding: 0 var(--gutter) 5rem;
+}
+
+.cards--dark > h2,
+.cards--dark .cards__container {
+  width: 100%;
+  max-width: calc(1120px - 2 * var(--gutter));
+}
+
+.cards--dark > h2 {
+  text-align: left;
+  font-size: 1.75rem;
+  color: #f2f0ee;
+}
+
+.cards--dark .cards__wrapper {
+  width: 100%;
+  margin: 24px 0 0;
+}
+
+.cards--dark .cards__items {
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.cards--dark .cards__item {
+  margin: 0;
+}
+
+.cards--dark .cards__item__link {
+  background: #242222;
+  border: 1px solid #3a3636;
+  box-shadow: none;
+  filter: none;
+  -webkit-filter: none;
+}
+
+.cards--dark .cards__item__text {
+  color: #f2f0ee;
+}
+
+@media only screen and (max-width: 1024px) {
+  .cards--dark .cards__item {
+    margin-bottom: 20px;
+  }
+}

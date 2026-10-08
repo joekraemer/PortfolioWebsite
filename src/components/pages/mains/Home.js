@@ -9,10 +9,10 @@ const featured = featuredSlugs.map((slug) => {
 
 function Home() {
     return (
-        <>
+        <div className='home'>
             <HeroSection />
-            <Cards heading='Featured Projects' headingLevel={2} rows={[2, 3]} items={featured} />
-        </>
+            <Cards heading='Featured Projects' headingLevel={2} rows={[2, 3]} items={featured} tone='dark' />
+        </div>
     )
 }
 
