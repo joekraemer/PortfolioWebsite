@@ -11,7 +11,8 @@
     "start": "vite",
     "build": "vite build && node scripts/spa-routes.mjs",
     "preview": "vite preview",
-    "lint": "eslint src"
+    "lint": "eslint src",
+    "test": "node --test"
   },
   "dependencies": {
     "react": "^18.3.1",
