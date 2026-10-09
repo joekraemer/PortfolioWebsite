@@ -10,7 +10,8 @@ export const Button = ({
     onClick,
     buttonStyle,
     buttonSize,
-    to
+    to,
+    current
 }) => {
     const checkButtonStyle = STYLES.includes(buttonStyle) ? buttonStyle : STYLES[0]
     const checkButtonSize = SIZES.includes(buttonSize) ? buttonSize : SIZES[0]
@@ -20,6 +21,7 @@ export const Button = ({
             to={to}
             className={`btn btn-mobile ${checkButtonStyle} ${checkButtonSize}`}
             onClick={onClick}
+            aria-current={current ? 'page' : undefined}
         >
             {children}
         </Link>
