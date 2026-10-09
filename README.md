@@ -24,6 +24,16 @@ correctly under the GitHub Pages project sub-path.
 
 Serves the production build locally to sanity-check it before deploying.
 
+### `npm test`
+
+Runs the route tests in `scripts/` with `node --test`. Run `npm run build`
+first so the checks on `build/` run too.
+
+## Checks
+
+Every pull request runs `.github/workflows/ci.yml`: lint, build, test, and
+`npm audit --omit=dev --audit-level=high`.
+
 ## Deployment
 
 Every push to `main` triggers `.github/workflows/deploy.yml`, which builds the
