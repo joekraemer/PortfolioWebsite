@@ -75,7 +75,7 @@
     color: #242424;
 }
 
-.fa-bars {
+.menu-icon .icon {
     color: #fff;
 }
 
@@ -145,8 +145,7 @@
         cursor: pointer;
     }
 
-    .fa-times {
-        color: #fff;
+    .menu-icon .icon--xmark {
         font-size: 2rem;
     }
 
