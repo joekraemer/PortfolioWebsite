@@ -384,3 +384,11 @@
     background: rgba(255, 255, 255, 0.1);
     border-color: rgba(255, 255, 255, 0.35);
 }
+
+/* 404 page (#86): same spacing as the Home hero buttons. */
+.notfound__btns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 28px;
+}
