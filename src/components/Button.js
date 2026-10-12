@@ -11,15 +11,17 @@ export const Button = ({
     buttonStyle,
     buttonSize,
     to,
-    current
+    current,
+    className
 }) => {
     const checkButtonStyle = STYLES.includes(buttonStyle) ? buttonStyle : STYLES[0]
     const checkButtonSize = SIZES.includes(buttonSize) ? buttonSize : SIZES[0]
+    const classes = ['btn', checkButtonStyle, checkButtonSize, className].filter(Boolean).join(' ')
 
     return (
         <Link
             to={to}
-            className={`btn btn-mobile ${checkButtonStyle} ${checkButtonSize}`}
+            className={classes}
             onClick={onClick}
             aria-current={current ? 'page' : undefined}
         >

@@ -1,4 +1,5 @@
 import { useEffect, useState, useSyncExternalStore } from 'react'
+import asset from '../../../asset'
 import './ContentPage.css'
 import Icon from '../../Icon';
 
@@ -130,7 +131,7 @@ const INTERESTS = [
 ];
 
 export default function Resume() {
-    const pdf = `${import.meta.env.BASE_URL}JoeKraemer_Resume.pdf`
+    const pdf = asset('JoeKraemer_Resume.pdf')
 
     return (
         <div className="content__page">

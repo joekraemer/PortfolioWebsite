@@ -1,3 +1,4 @@
+import asset from '../../../asset'
 import './ContentPage.css'
 
 export default function Contact() {
@@ -16,7 +17,7 @@ export default function Contact() {
                         <p className="content__meta">Grab a PDF copy of my full résumé.</p>
                     </div>
                     <a className="resume__btn"
-                       href={`${import.meta.env.BASE_URL}JoeKraemer_Resume.pdf`}
+                       href={asset('JoeKraemer_Resume.pdf')}
                        download>
                         Download résumé (PDF)
                     </a>

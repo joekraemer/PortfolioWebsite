@@ -94,6 +94,10 @@
 }
 
 @media screen and (max-width: 960px) {
+    .navbar-container .navbar-cta {
+        display: none;
+    }
+
     .nav-menu {
         display: flex;
         flex-direction: column;

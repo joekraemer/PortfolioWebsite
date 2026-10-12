@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { Link, NavLink, useLocation } from 'react-router-dom'
 import { Button } from '../components/Button.js';
 import './Navbar.css'
@@ -6,7 +6,6 @@ import Icon from './Icon';
 
 function Navbar() {
   const [click, setClick] = useState(false);
-  const [button, setButton] = useState(() => window.innerWidth > 960);
   const location = useLocation();
 
   // The desktop Contact button is a plain Link, so mark it by hand (#51).
@@ -23,12 +22,6 @@ function Navbar() {
     setLastPath(location.pathname);
     setClick(false);
   }
-
-  useEffect(() => {
-    const showButton = () => setButton(window.innerWidth > 960)
-    window.addEventListener('resize', showButton)
-    return () => window.removeEventListener('resize', showButton)
-  }, [])
 
   return (
     <nav className='navbar'>
@@ -68,7 +61,8 @@ function Navbar() {
             </NavLink>
           </li>
         </ul>
-        {button && <Button buttonStyle='btn--outline' to='/contact' current={onContact}>Contact</Button>}
+        {/* Hidden at 960px and below by Navbar.css; the menu has its own Contact link. */}
+        <Button buttonStyle='btn--outline' to='/contact' current={onContact} className='navbar-cta'>Contact</Button>
       </div>
     </nav>
   )
