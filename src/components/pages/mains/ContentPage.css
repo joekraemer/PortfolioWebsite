@@ -271,17 +271,19 @@
 
 .resume__nav__link {
     display: block;
-    padding: 0.45rem 0 0.45rem 1rem;
+    padding: 0.5rem 0 0.5rem 1rem;
     margin-left: -1px;
     border-left: 2px solid transparent;
-    color: #8a8a8a;
+    color: #b8b4b2;
     text-decoration: none;
-    font-size: var(--fs-meta);
+    font-size: 1rem;
+    line-height: 1.35;
     transition: color 0.2s ease, border-color 0.2s ease;
 }
 
 .resume__nav__link:hover {
-    color: #d0d0d0;
+    color: #fff;
+    border-left-color: rgba(255, 255, 255, 0.4);
 }
 
 .resume__nav__link.active {
