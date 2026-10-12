@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { Link, useLocation } from 'react-router-dom'
+import { Link, NavLink, useLocation } from 'react-router-dom'
 import { Button } from '../components/Button.js';
 import './Navbar.css'
 
@@ -7,6 +7,9 @@ function Navbar() {
   const [click, setClick] = useState(false);
   const [button, setButton] = useState(() => window.innerWidth > 960);
   const location = useLocation();
+
+  // The desktop Contact button is a plain Link, so mark it by hand (#51).
+  const onContact = location.pathname.replace(/\/+$/, '').toLowerCase() === '/contact';
 
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
@@ -44,27 +47,27 @@ function Navbar() {
         </button>
         <ul id='nav-menu' className={click ? 'nav-menu active' : 'nav-menu'}>
           <li className='nav-item'>
-            <Link to='/' className='nav-links' onClick={closeMobileMenu}>
+            <NavLink to='/' end className='nav-links' onClick={closeMobileMenu}>
               Home
-            </Link>
+            </NavLink>
           </li>
           <li className='nav-item'>
-            <Link to='/projects' className='nav-links' onClick={closeMobileMenu}>
+            <NavLink to='/projects' className='nav-links' onClick={closeMobileMenu}>
               Projects
-            </Link>
+            </NavLink>
           </li>
           <li className='nav-item'>
-            <Link to='/resume' className='nav-links' onClick={closeMobileMenu}>
+            <NavLink to='/resume' className='nav-links' onClick={closeMobileMenu}>
               Résumé
-            </Link>
+            </NavLink>
           </li>
           <li className='nav-item'>
-            <Link to='/contact' className='nav-links-mobile' onClick={closeMobileMenu}>
+            <NavLink to='/contact' className='nav-links-mobile' onClick={closeMobileMenu}>
               Contact
-            </Link>
+            </NavLink>
           </li>
         </ul>
-        {button && <Button buttonStyle='btn--outline' to='/contact'>Contact</Button>}
+        {button && <Button buttonStyle='btn--outline' to='/contact' current={onContact}>Contact</Button>}
       </div>
     </nav>
   )

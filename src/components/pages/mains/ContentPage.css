@@ -226,9 +226,15 @@
 }
 
 @media screen and (max-width: 600px) {
-        .contact__links li {
+    .contact__links li {
         flex-direction: column;
         gap: 0.15rem;
+    }
+
+    /* The 90px basis is the desktop label column; stacked, it would become
+       the label's height and leave a gap above each value (#51). */
+    .contact__label {
+        flex: none;
     }
 }
 
