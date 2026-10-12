@@ -66,3 +66,15 @@ test('build/sitemap.xml lists exactly the routes', needBuild, () => {
   const locs = [...sitemap.matchAll(/<loc>([^<]*)<\/loc>/g)].map((m) => unescapeHtml(m[1]));
   assert.deepEqual(locs.sort(), routes.map((r) => urlFor(r.path)).sort());
 });
+
+test('every page in build/ has valid Person JSON-LD', needBuild, () => {
+  for (const route of routes) {
+    const file = fileFor(route.path);
+    const html = readFileSync(join(buildDir, file), 'utf8');
+    const block = html.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/)?.[1];
+    assert.ok(block, `build/${file} has no JSON-LD`);
+    const data = JSON.parse(block);
+    assert.equal(data['@type'], 'Person', `build/${file} JSON-LD is not a Person`);
+    assert.equal(data.url, `${SITE_URL}/`);
+  }
+});

@@ -26,6 +26,30 @@
     <link rel="preload" href="/fonts/pt-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" href="/fonts/pt-sans-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="manifest" href="/manifest.json" />
+    <!-- Tells search engines who the site is about (#77). Check changes with
+         https://search.google.com/test/rich-results -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Joe Kraemer",
+        "jobTitle": "Software Development Engineer",
+        "worksFor": { "@type": "Organization", "name": "Amazon" },
+        "description": "Software engineer at Amazon Leo working on embedded and systems software, hardware-in-the-loop testing and satellite ground links.",
+        "url": "https://joekraemer.github.io/PortfolioWebsite/",
+        "image": "https://joekraemer.github.io/PortfolioWebsite/images/profile.jpg",
+        "sameAs": [
+          "https://www.linkedin.com/in/kraemerjoe",
+          "https://github.com/joekraemer",
+          "https://www.instagram.com/jak_creative_",
+          "https://joekraemer.github.io/photo-website/"
+        ],
+        "alumniOf": [
+          { "@type": "CollegeOrUniversity", "name": "Georgia Institute of Technology" },
+          { "@type": "CollegeOrUniversity", "name": "University of Illinois at Urbana-Champaign" }
+        ]
+      }
+    </script>
     <!-- Start Single Page Apps for GitHub Pages -->
     <!-- https://github.com/rafgraph/spa-github-pages -->
     <script type="text/javascript">
