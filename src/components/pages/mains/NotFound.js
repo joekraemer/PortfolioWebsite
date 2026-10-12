@@ -1,15 +1,17 @@
-import { Link } from 'react-router-dom'
-import '../../ProjectPage.css'
+import { Button } from '../../Button'
+import './ContentPage.css'
 
+// 404 page (#86): the same dark content layout as Résumé and Contact, with
+// buttons back into the site instead of a plain link.
 export default function NotFound() {
     return (
-        <div className="project__subpages__parent">
-            <div className='project__subpages_container'>
+        <div className="content__page">
+            <div className="content__page__inner">
                 <h1>Page not found</h1>
-                <p className="project__subtitle">The page you are looking for does not exist.</p>
-
-                <div className='project__subpages__content'>
-                    <p><Link to='/'>Back to Home</Link></p>
+                <p>The page you are looking for does not exist.</p>
+                <div className="notfound__btns">
+                    <Button to='/' buttonStyle='btn--primary' buttonSize='btn--large'>Home</Button>
+                    <Button to='/projects' buttonStyle='btn--outline' buttonSize='btn--large'>Projects</Button>
                 </div>
             </div>
         </div>
