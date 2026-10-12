@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import { Link, NavLink, useLocation } from 'react-router-dom'
 import { Button } from '../components/Button.js';
 import './Navbar.css'
+import Icon from './Icon';
 
 function Navbar() {
   const [click, setClick] = useState(false);
@@ -43,7 +44,7 @@ function Navbar() {
           aria-expanded={click}
           aria-controls='nav-menu'
         >
-          <i className={click ? 'fas fa-times' : 'fas fa-bars'} aria-hidden='true' />
+          <Icon name={click ? 'xmark' : 'bars'} />
         </button>
         <ul id='nav-menu' className={click ? 'nav-menu active' : 'nav-menu'}>
           <li className='nav-item'>

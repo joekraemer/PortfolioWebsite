@@ -359,10 +359,10 @@
     font-weight: 700;
 }
 
-.interests__tile i {
+.interests__tile .icon {
     display: block;
     font-size: 1.7rem;
-    margin-bottom: 0.55rem;
+    margin: 0 auto 0.55rem;
 }
 
 /* A tile that links out (#80): the link fills the tile, so it looks like the

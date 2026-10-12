@@ -1,5 +1,6 @@
 import { useEffect, useState, useSyncExternalStore } from 'react'
 import './ContentPage.css'
+import Icon from '../../Icon';
 
 // Phones get collapsible job descriptions (#89). Matches the 600px phone
 // breakpoint used in ContentPage.css.
@@ -118,14 +119,14 @@ const SKILL_GROUPS = [
 ];
 
 const INTERESTS = [
-    { name: 'Photography', icon: 'fas fa-camera', href: 'https://joekraemer.github.io/photo-website/' },
-    { name: 'Climbing', icon: 'fas fa-mountain' },
-    { name: 'Sim Racing', icon: 'fas fa-flag-checkered' },
-    { name: 'Hiking', icon: 'fas fa-hiking' },
-    { name: 'Snowboarding', icon: 'fas fa-snowboarding' },
-    { name: 'Board Games', icon: 'fas fa-dice' },
-    { name: 'Running', icon: 'fas fa-running' },
-    { name: 'Traveling', icon: 'fas fa-plane' },
+    { name: 'Photography', icon: 'camera', href: 'https://joekraemer.github.io/photo-website/' },
+    { name: 'Climbing', icon: 'mountain' },
+    { name: 'Sim Racing', icon: 'flag-checkered' },
+    { name: 'Hiking', icon: 'person-hiking' },
+    { name: 'Snowboarding', icon: 'person-snowboarding' },
+    { name: 'Board Games', icon: 'dice' },
+    { name: 'Running', icon: 'person-running' },
+    { name: 'Traveling', icon: 'plane' },
 ];
 
 export default function Resume() {
@@ -314,12 +315,12 @@ export default function Resume() {
                         <li className={interest.href ? 'interests__tile interests__tile--link' : 'interests__tile'} key={interest.name}>
                             {interest.href ? (
                                 <a href={interest.href} target="_blank" rel="noopener noreferrer">
-                                    <i className={interest.icon} aria-hidden="true"></i>
+                                    <Icon name={interest.icon} />
                                     <span>{interest.name}</span>
                                 </a>
                             ) : (
                                 <>
-                                    <i className={interest.icon} aria-hidden="true"></i>
+                                    <Icon name={interest.icon} />
                                     <span>{interest.name}</span>
                                 </>
                             )}

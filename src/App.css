@@ -100,3 +100,14 @@ p {
 main:focus {
     outline: none;
 }
+
+/* Inline SVG icons (src/components/Icon.js, #74). Same box as the Font
+   Awesome webfont glyphs they replace: 1em tall, sitting 0.125em below the
+   baseline. Width comes from each icon's viewBox. */
+.icon {
+  display: inline-block;
+  height: 1em;
+  overflow: visible;
+  vertical-align: -0.125em;
+  fill: currentColor;
+}
