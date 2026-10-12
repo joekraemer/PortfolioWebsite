@@ -1,4 +1,5 @@
-import { Link } from 'react-router-dom'
+import { Button } from './Button'
+import asset from '../asset'
 import './HeroSection.css'
 
 // Home hero (#35, layout E): intro on the left, a decorative terminal panel on
@@ -9,7 +10,7 @@ function HeroSection() {
     <section className='hero'>
       <div className='hero__intro'>
         <div className='hero__id'>
-          <img className='hero__avatar' src={`${import.meta.env.BASE_URL}images/profile.jpg`} alt='Joe Kraemer' />
+          <img className='hero__avatar' src={asset('images/profile.jpg')} alt='Joe Kraemer' />
           <div>
             <p className='hero__path'>~/joe-kraemer</p>
             <h1>Joe Kraemer</h1>
@@ -20,8 +21,8 @@ function HeroSection() {
           and hardware-in-the-loop test infrastructure.
         </p>
         <div className='hero__btns'>
-          <Link to='/projects' className='btn btn--primary btn--large'>View Projects</Link>
-          <Link to='/resume' className='btn btn--outline btn--large'>Résumé</Link>
+          <Button to='/projects' buttonStyle='btn--primary' buttonSize='btn--large'>View Projects</Button>
+          <Button to='/resume' buttonStyle='btn--outline' buttonSize='btn--large'>Résumé</Button>
         </div>
       </div>
 

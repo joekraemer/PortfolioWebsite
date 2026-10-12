@@ -30,4 +30,14 @@ export default [
       'react/prop-types': 'off',
     },
   },
+  {
+    // Build scripts, tests and config files run in Node.
+    files: ['scripts/**/*.{js,mjs}', '*.config.js'],
+    ...js.configs.recommended,
+    languageOptions: {
+      ecmaVersion: 'latest',
+      sourceType: 'module',
+      globals: globals.node,
+    },
+  },
 ]
