@@ -5,6 +5,7 @@ import YouTubeEmbed from './YouTubeEmbed'
 import NotFound from './pages/mains/NotFound'
 import asset from '../asset'
 import { findProject } from '../data/projects'
+import photoInfo, { photoSrcSet } from '../data/photoInfo'
 
 function Block({ block }) {
     switch (block.type) {
@@ -14,17 +15,38 @@ function Block({ block }) {
             return <h2>{block.text}</h2>
         case 'gallery':
             return <PhotoGallery photos={block.photos} />
-        case 'photo':
+        case 'photo': {
+            const info = photoInfo(block.src)
             return (
-                <div className="photo__container">
-                    <img className="photo__img" src={asset(block.src)} alt={block.alt} />
+                <div className="project__photo">
+                    <img src={asset(info.full)} srcSet={photoSrcSet(info, asset)}
+                        sizes="(max-width: 760px) 100vw, 720px"
+                        width={info.w} height={info.h} alt={block.alt}
+                        loading="lazy" decoding="async" />
                 </div>
             )
+        }
         case 'youtube':
             return <YouTubeEmbed id={block.id} title={block.title} />
         default:
             throw new Error(`Unknown project block type: ${block.type}`)
     }
+}
+
+// Role / Tools / Result box under the title (#50). Fields are optional.
+const SUMMARY_FIELDS = [['role', 'Role'], ['tools', 'Tools'], ['result', 'Result']]
+
+function Summary({ summary }) {
+    return (
+        <dl className="project__summary">
+            {SUMMARY_FIELDS.filter(([key]) => summary[key]).map(([key, label]) => (
+                <div key={key} className="project__summary__row">
+                    <dt>{label}</dt>
+                    <dd>{summary[key]}</dd>
+                </div>
+            ))}
+        </dl>
+    )
 }
 
 // One template for every project page, filled from src/data/projects.js.
@@ -38,6 +60,7 @@ export default function ProjectPage() {
             <div className='project__subpages_container'>
                 <h1>{project.title}</h1>
                 <p className="project__subtitle">{project.subtitle}</p>
+                {project.summary && <Summary summary={project.summary} />}
 
                 <div className='project__subpages__content'>
                     {project.body.map((block, i) => <Block key={i} block={block} />)}
