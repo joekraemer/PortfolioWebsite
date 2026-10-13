@@ -33,22 +33,6 @@ function Block({ block }) {
     }
 }
 
-// Role / Tools / Result box under the title (#50). Fields are optional.
-const SUMMARY_FIELDS = [['role', 'Role'], ['tools', 'Tools'], ['result', 'Result']]
-
-function Summary({ summary }) {
-    return (
-        <dl className="project__summary">
-            {SUMMARY_FIELDS.filter(([key]) => summary[key]).map(([key, label]) => (
-                <div key={key} className="project__summary__row">
-                    <dt>{label}</dt>
-                    <dd>{summary[key]}</dd>
-                </div>
-            ))}
-        </dl>
-    )
-}
-
 // One template for every project page, filled from src/data/projects.js.
 export default function ProjectPage() {
     const { slug } = useParams()
@@ -60,7 +44,6 @@ export default function ProjectPage() {
             <div className='project__subpages_container'>
                 <h1>{project.title}</h1>
                 <p className="project__subtitle">{project.subtitle}</p>
-                {project.summary && <Summary summary={project.summary} />}
 
                 <div className='project__subpages__content'>
                     {project.body.map((block, i) => <Block key={i} block={block} />)}

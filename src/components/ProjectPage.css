@@ -42,37 +42,6 @@
     margin: 8px 0 32px;
 }
 
-/* Summary box (#50): role, tools and result at a glance. */
-.project__summary {
-    display: grid;
-    grid-template-columns: max-content 1fr;
-    gap: 8px 24px;
-    margin: 0 0 40px;
-    padding: 20px 24px;
-    border-left: 4px solid #5890B0;
-    border-radius: 0 6px 6px 0;
-    background: #f4f2f0;
-    font-size: var(--fs-body);
-    line-height: 1.6;
-}
-
-.project__summary dt {
-    font-size: var(--fs-meta);
-    font-weight: 700;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-    color: #4a4a4a;
-    line-height: 1.6rem;
-}
-
-.project__summary__row {
-    display: contents;
-}
-
-.project__summary dd {
-    margin: 0;
-}
-
 /* Single photos scale to the text column. */
 .project__photo {
     margin: 1.5rem 0 2rem;
@@ -83,16 +52,4 @@
     max-width: 100%;
     height: auto;
     border-radius: 6px;
-}
-
-@media only screen and (max-width: 600px) {
-    .project__summary {
-        grid-template-columns: 1fr;
-        gap: 2px;
-        padding: 16px 18px;
-    }
-
-    .project__summary__row + .project__summary__row dt {
-        margin-top: 10px;
-    }
 }
