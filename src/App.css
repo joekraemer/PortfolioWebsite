@@ -67,18 +67,6 @@ p {
     margin-top: 4px;
 }
 
-.photo__container {
-    height: 300px;
-    margin: 10px;
-    align-content: center;
-    overflow: hidden;
-}
-
-.photo__img {
-    height: 100%;
-    object-fit: cover;
-}
-
 /* Skip link (#64): off-screen until it receives keyboard focus. */
 .skip-link {
     position: absolute;

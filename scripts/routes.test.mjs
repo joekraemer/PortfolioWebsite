@@ -78,3 +78,20 @@ test('every page in build/ has valid Person JSON-LD', needBuild, () => {
     assert.equal(data.url, `${SITE_URL}/`);
   }
 });
+
+test('every project photo has WebP versions from scripts/project-photos.sh', async () => {
+  const { projects } = await import('../src/data/projects.js');
+  const root = join(dirname(fileURLToPath(import.meta.url)), '..');
+  const manifest = JSON.parse(readFileSync(join(root, 'src/data/photos.json'), 'utf8'));
+  for (const project of projects) {
+    const photos = project.body.flatMap((b) =>
+      b.type === 'gallery' ? b.photos : b.type === 'photo' ? [b] : []);
+    for (const { src } of photos) {
+      const info = manifest[src];
+      assert.ok(info, `${src} is not in photos.json; run scripts/project-photos.sh`);
+      for (const file of [info.full, info.thumb]) {
+        assert.ok(existsSync(join(root, 'public', file)), `missing public/${file}`);
+      }
+    }
+  }
+});

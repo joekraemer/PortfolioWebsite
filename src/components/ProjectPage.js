@@ -5,6 +5,7 @@ import YouTubeEmbed from './YouTubeEmbed'
 import NotFound from './pages/mains/NotFound'
 import asset from '../asset'
 import { findProject } from '../data/projects'
+import photoInfo, { photoSrcSet } from '../data/photoInfo'
 
 function Block({ block }) {
     switch (block.type) {
@@ -14,12 +15,17 @@ function Block({ block }) {
             return <h2>{block.text}</h2>
         case 'gallery':
             return <PhotoGallery photos={block.photos} />
-        case 'photo':
+        case 'photo': {
+            const info = photoInfo(block.src)
             return (
-                <div className="photo__container">
-                    <img className="photo__img" src={asset(block.src)} alt={block.alt} />
+                <div className="project__photo">
+                    <img src={asset(info.full)} srcSet={photoSrcSet(info, asset)}
+                        sizes="(max-width: 760px) 100vw, 720px"
+                        width={info.w} height={info.h} alt={block.alt}
+                        loading="lazy" decoding="async" />
                 </div>
             )
+        }
         case 'youtube':
             return <YouTubeEmbed id={block.id} title={block.title} />
         default:

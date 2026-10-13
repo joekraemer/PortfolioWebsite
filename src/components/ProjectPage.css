@@ -42,32 +42,14 @@
     margin: 8px 0 32px;
 }
 
-/* Single photos and galleries line up with the text column. */
-.project__subpages__parent .photo__container {
-    margin: 10px 0;
+/* Single photos scale to the text column. */
+.project__photo {
+    margin: 1.5rem 0 2rem;
 }
 
-.project__subpages__parent .photo-gallery {
-    padding: 0;
-    margin: 1rem 0 2rem;
-    background: none;
-}
-
-.project__subpages__parent .photo-gallery__container {
-    width: calc(100% + 20px);
-    max-width: none;
-    margin: 0 -10px;
-}
-
-/* Phones (#54): a fixed-height image used to force the content wider than
-   the screen. Scale the image to the column width instead. */
-@media only screen and (max-width: 600px) {
-    .project__subpages__parent .photo__container {
-        height: auto;
-    }
-
-    .project__subpages__parent .photo__img {
-        width: 100%;
-        height: auto;
-    }
+.project__photo img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
 }
