@@ -9,8 +9,6 @@ function CardItem(props) {
     const widths = props.thumbWidths
     const largest = widths[widths.length - 1]
     const srcSet = widths.map((w) => `${asset(`${props.thumb}-${w}.webp`)} ${w}w`).join(', ')
-    // Cards sit two or three to a row on desktop and full width below 1024px.
-    const sizes = '(min-width: 1024px) 520px, 100vw'
     // Card titles sit one level below the section heading: h3 on Home
     // (hero h1 -> section h2), h2 on Projects (section h1).
     const Heading = `h${props.headingLevel ?? 3}`
@@ -22,10 +20,15 @@ function CardItem(props) {
                     <img
                         src={asset(`${props.thumb}-${largest}.webp`)}
                         srcSet={srcSet}
-                        sizes={sizes}
+                        // Rendered card width per breakpoint, from Cards.
+                        sizes={props.sizes}
                         width={largest}
                         height={Math.round(largest * 2 / 3)}
                         loading={props.lazy ? 'lazy' : 'eager'}
+                        // React 18 doesn't know fetchPriority yet (it warns), so
+                        // pass the plain HTML attribute through.
+                        // eslint-disable-next-line react/no-unknown-property
+                        fetchpriority={props.priority ? 'high' : undefined}
                         decoding='async'
                         alt=''
                         className='cards__item__img'
